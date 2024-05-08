@@ -28,17 +28,17 @@ namespace EM.Web.Controllers
 		{
 			List<Aluno> alunos = _repositorioAluno.GetAll().ToList();
 
-			byte[] pdfBytes = tabelaRelatorio.GerarRelatorio(alunos, null, null, null);
+			byte[] pdfBytes = tabelaRelatorio.GerarRelatorio(alunos, null, null, null, null);
 
 			return File(pdfBytes, "application/pdf");
 		}
 
 		[HttpPost]
-		public IActionResult GerarRelatorio(int? ID_Cidade, Sexo? Sexo, string Ordem)
+		public IActionResult GerarRelatorio(int? ID_Cidade, Sexo? Sexo, string Ordem, string? Uf)
 		{
 			List<Aluno> alunos = _repositorioAluno.GetAll().ToList();
 
-			byte[] pdfBytes = tabelaRelatorio.GerarRelatorio(alunos, ID_Cidade, Sexo, Ordem);
+			byte[] pdfBytes = tabelaRelatorio.GerarRelatorio(alunos, ID_Cidade, Sexo, Ordem, Uf);
 
 			return File(pdfBytes, "application/pdf");
 		}

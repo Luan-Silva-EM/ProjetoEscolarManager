@@ -7,40 +7,64 @@
       "RelativeMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|solutionrelative:em.web\\controllers\\utilitarios\\tabelarelatorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D75124C1-E583-486C-8872-E638A1738E33}|EM.Domain\\EM.Domain.csproj|c:\\workluan\\em.web\\em.domain\\cidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D75124C1-E583-486C-8872-E638A1738E33}|EM.Domain\\EM.Domain.csproj|solutionrelative:em.domain\\cidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6D267B8-727F-4E2C-885B-3F47D0259B58}|EM.Repository\\EM.Repository.csproj|c:\\workluan\\em.web\\em.repository\\repositorioaluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6D267B8-727F-4E2C-885B-3F47D0259B58}|EM.Repository\\EM.Repository.csproj|solutionrelative:em.repository\\repositorioaluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D75124C1-E583-486C-8872-E638A1738E33}|EM.Domain\\EM.Domain.csproj|c:\\workluan\\em.web\\em.domain\\interfaces\\irepositorioaluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D75124C1-E583-486C-8872-E638A1738E33}|EM.Domain\\EM.Domain.csproj|solutionrelative:em.domain\\interfaces\\irepositorioaluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|c:\\workluan\\em.web\\em.web\\controllers\\alunocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|solutionrelative:em.web\\controllers\\alunocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|c:\\workluan\\em.web\\em.web\\views\\aluno\\relatorioaluno.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|C:\\WorkLuan\\EM.Web\\em.web\\views\\aluno\\relatorioaluno.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|solutionrelative:em.web\\views\\aluno\\relatorioaluno.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|c:\\workluan\\em.web\\em.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|solutionrelative:em.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|c:\\workluan\\em.web\\em.web\\controllers\\relatoriocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|C:\\WorkLuan\\EM.Web\\em.web\\controllers\\relatoriocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|solutionrelative:em.web\\controllers\\relatoriocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|c:\\workluan\\em.web\\em.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|c:\\workluan\\em.web\\em.web\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|solutionrelative:em.web\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|C:\\WorkLuan\\EM.Web\\em.web\\views\\cidade\\cadastrarcidade.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|solutionrelative:em.web\\views\\cidade\\cadastrarcidade.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|c:\\workluan\\em.web\\em.web\\views\\aluno\\cadastraraluno.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|solutionrelative:em.web\\views\\aluno\\cadastraraluno.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6D267B8-727F-4E2C-885B-3F47D0259B58}|EM.Repository\\EM.Repository.csproj|C:\\WorkLuan\\EM.Web\\em.repository\\repositorioaluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6D267B8-727F-4E2C-885B-3F47D0259B58}|EM.Repository\\EM.Repository.csproj|solutionrelative:em.repository\\repositorioaluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|C:\\WorkLuan\\EM.Web\\em.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|solutionrelative:em.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|c:\\workluan\\em.web\\em.web\\views\\cidade\\cadastrarcidade.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|solutionrelative:em.web\\views\\cidade\\cadastrarcidade.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D75124C1-E583-486C-8872-E638A1738E33}|EM.Domain\\EM.Domain.csproj|C:\\WorkLuan\\EM.Web\\em.domain\\cidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D75124C1-E583-486C-8872-E638A1738E33}|EM.Domain\\EM.Domain.csproj|solutionrelative:em.domain\\cidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6D267B8-727F-4E2C-885B-3F47D0259B58}|EM.Repository\\EM.Repository.csproj|c:\\workluan\\em.web\\em.repository\\repositoriocidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6D267B8-727F-4E2C-885B-3F47D0259B58}|EM.Repository\\EM.Repository.csproj|solutionrelative:em.repository\\repositoriocidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D75124C1-E583-486C-8872-E638A1738E33}|EM.Domain\\EM.Domain.csproj|c:\\workluan\\em.web\\em.domain\\aluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D75124C1-E583-486C-8872-E638A1738E33}|EM.Domain\\EM.Domain.csproj|solutionrelative:em.domain\\aluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D75124C1-E583-486C-8872-E638A1738E33}|EM.Domain\\EM.Domain.csproj|c:\\workluan\\em.web\\em.domain\\enums\\uf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D75124C1-E583-486C-8872-E638A1738E33}|EM.Domain\\EM.Domain.csproj|solutionrelative:em.domain\\enums\\uf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|C:\\WorkLuan\\EM.Web\\em.web\\controllers\\alunocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|solutionrelative:em.web\\controllers\\alunocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D75124C1-E583-486C-8872-E638A1738E33}|EM.Domain\\EM.Domain.csproj|C:\\WorkLuan\\EM.Web\\em.domain\\interfaces\\irepositorioaluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D75124C1-E583-486C-8872-E638A1738E33}|EM.Domain\\EM.Domain.csproj|solutionrelative:em.domain\\interfaces\\irepositorioaluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|C:\\WorkLuan\\EM.Web\\em.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|solutionrelative:em.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D75124C1-E583-486C-8872-E638A1738E33}|EM.Domain\\EM.Domain.csproj|c:\\workluan\\em.web\\em.domain\\enums\\sexo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D75124C1-E583-486C-8872-E638A1738E33}|EM.Domain\\EM.Domain.csproj|solutionrelative:em.domain\\enums\\sexo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,19 +74,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 232,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "IRepositorioAluno.cs",
-              "DocumentMoniker": "C:\\WorkLuan\\EM.Web\\EM.Domain\\Interfaces\\IRepositorioAluno.cs",
-              "RelativeDocumentMoniker": "EM.Domain\\Interfaces\\IRepositorioAluno.cs",
-              "ToolTip": "C:\\WorkLuan\\EM.Web\\EM.Domain\\Interfaces\\IRepositorioAluno.cs",
-              "RelativeToolTip": "EM.Domain\\Interfaces\\IRepositorioAluno.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-08T16:22:46.497Z",
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\WorkLuan\\EM.Web\\EM.Web\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "EM.Web\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\WorkLuan\\EM.Web\\EM.Web\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "EM.Web\\wwwroot\\js\\site.js",
+              "ViewState": "AQIAABEAAAAAAAAAAADwvyEAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-05-08T19:33:52.162Z",
               "EditorCaption": ""
             },
             {
@@ -71,39 +95,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\WorkLuan\\EM.Web\\EM.Web\\Program.cs",
-              "RelativeDocumentMoniker": "EM.Web\\Program.cs",
-              "ToolTip": "C:\\WorkLuan\\EM.Web\\EM.Web\\Program.cs",
-              "RelativeToolTip": "EM.Web\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-08T16:05:35.94Z",
+              "DocumentIndex": 5,
+              "Title": "CadastrarAluno.cshtml",
+              "DocumentMoniker": "C:\\WorkLuan\\EM.Web\\EM.Web\\Views\\Aluno\\CadastrarAluno.cshtml",
+              "RelativeDocumentMoniker": "EM.Web\\Views\\Aluno\\CadastrarAluno.cshtml",
+              "ToolTip": "C:\\WorkLuan\\EM.Web\\EM.Web\\Views\\Aluno\\CadastrarAluno.cshtml",
+              "RelativeToolTip": "EM.Web\\Views\\Aluno\\CadastrarAluno.cshtml",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-08T19:29:14.842Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
+              "Title": "Aluno.cs",
+              "DocumentMoniker": "C:\\WorkLuan\\EM.Web\\EM.Domain\\Aluno.cs",
+              "RelativeDocumentMoniker": "EM.Domain\\Aluno.cs",
+              "ToolTip": "C:\\WorkLuan\\EM.Web\\EM.Domain\\Aluno.cs",
+              "RelativeToolTip": "EM.Domain\\Aluno.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAcAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T18:47:40.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UF.cs",
+              "DocumentMoniker": "C:\\WorkLuan\\EM.Web\\EM.Domain\\Enums\\UF.cs",
+              "RelativeDocumentMoniker": "EM.Domain\\Enums\\UF.cs",
+              "ToolTip": "C:\\WorkLuan\\EM.Web\\EM.Domain\\Enums\\UF.cs",
+              "RelativeToolTip": "EM.Domain\\Enums\\UF.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T18:47:21.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "CadastrarCidade.cshtml",
               "DocumentMoniker": "C:\\WorkLuan\\EM.Web\\EM.Web\\Views\\Cidade\\CadastrarCidade.cshtml",
               "RelativeDocumentMoniker": "EM.Web\\Views\\Cidade\\CadastrarCidade.cshtml",
               "ToolTip": "C:\\WorkLuan\\EM.Web\\EM.Web\\Views\\Cidade\\CadastrarCidade.cshtml",
               "RelativeToolTip": "EM.Web\\Views\\Cidade\\CadastrarCidade.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAAdAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAiwBAAAABIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-08T14:10:20.294Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "RelatorioAluno.cshtml",
               "DocumentMoniker": "C:\\WorkLuan\\EM.Web\\EM.Web\\Views\\Aluno\\RelatorioAluno.cshtml",
               "RelativeDocumentMoniker": "EM.Web\\Views\\Aluno\\RelatorioAluno.cshtml",
               "ToolTip": "C:\\WorkLuan\\EM.Web\\EM.Web\\Views\\Aluno\\RelatorioAluno.cshtml",
               "RelativeToolTip": "EM.Web\\Views\\Aluno\\RelatorioAluno.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAHAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-08T12:02:37.898Z",
               "EditorCaption": ""
@@ -116,27 +166,27 @@
               "RelativeDocumentMoniker": "EM.Web\\Controllers\\Utilitarios\\TabelaRelatorio.cs",
               "ToolTip": "C:\\WorkLuan\\EM.Web\\EM.Web\\Controllers\\Utilitarios\\TabelaRelatorio.cs",
               "RelativeToolTip": "EM.Web\\Controllers\\Utilitarios\\TabelaRelatorio.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAgwCwAAAArAAAA",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAwwFQAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-07T13:05:52.406Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "RelatorioController.cs",
               "DocumentMoniker": "C:\\WorkLuan\\EM.Web\\EM.Web\\Controllers\\RelatorioController.cs",
               "RelativeDocumentMoniker": "EM.Web\\Controllers\\RelatorioController.cs",
               "ToolTip": "C:\\WorkLuan\\EM.Web\\EM.Web\\Controllers\\RelatorioController.cs",
               "RelativeToolTip": "EM.Web\\Controllers\\RelatorioController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAACAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAowCUAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-08T12:10:55.327Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\WorkLuan\\EM.Web\\EM.Web\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "EM.Web\\Views\\Home\\Index.cshtml",
@@ -149,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "AlunoController.cs",
               "DocumentMoniker": "C:\\WorkLuan\\EM.Web\\EM.Web\\Controllers\\AlunoController.cs",
               "RelativeDocumentMoniker": "EM.Web\\Controllers\\AlunoController.cs",
@@ -162,28 +212,80 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "Cidade.cs",
               "DocumentMoniker": "C:\\WorkLuan\\EM.Web\\EM.Domain\\Cidade.cs",
               "RelativeDocumentMoniker": "EM.Domain\\Cidade.cs",
               "ToolTip": "C:\\WorkLuan\\EM.Web\\EM.Domain\\Cidade.cs",
               "RelativeToolTip": "EM.Domain\\Cidade.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-08T12:30:45.126Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "RepositorioAluno.cs",
               "DocumentMoniker": "C:\\WorkLuan\\EM.Web\\EM.Repository\\RepositorioAluno.cs",
               "RelativeDocumentMoniker": "EM.Repository\\RepositorioAluno.cs",
               "ToolTip": "C:\\WorkLuan\\EM.Web\\EM.Repository\\RepositorioAluno.cs",
               "RelativeToolTip": "EM.Repository\\RepositorioAluno.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwA8AAAATAAAA",
+              "ViewState": "AQIAACgAAAAAAAAAAAAtwFUAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-08T11:09:58.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RepositorioCidade.cs",
+              "DocumentMoniker": "C:\\WorkLuan\\EM.Web\\EM.Repository\\RepositorioCidade.cs",
+              "RelativeDocumentMoniker": "EM.Repository\\RepositorioCidade.cs",
+              "ToolTip": "C:\\WorkLuan\\EM.Web\\EM.Repository\\RepositorioCidade.cs",
+              "RelativeToolTip": "EM.Repository\\RepositorioCidade.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAIwC8AAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T18:50:07.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\WorkLuan\\EM.Web\\EM.Web\\Program.cs",
+              "RelativeDocumentMoniker": "EM.Web\\Program.cs",
+              "ToolTip": "C:\\WorkLuan\\EM.Web\\EM.Web\\Program.cs",
+              "RelativeToolTip": "EM.Web\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T16:05:35.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IRepositorioAluno.cs",
+              "DocumentMoniker": "C:\\WorkLuan\\EM.Web\\EM.Domain\\Interfaces\\IRepositorioAluno.cs",
+              "RelativeDocumentMoniker": "EM.Domain\\Interfaces\\IRepositorioAluno.cs",
+              "ToolTip": "C:\\WorkLuan\\EM.Web\\EM.Domain\\Interfaces\\IRepositorioAluno.cs",
+              "RelativeToolTip": "EM.Domain\\Interfaces\\IRepositorioAluno.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T16:22:46.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Sexo.cs",
+              "DocumentMoniker": "C:\\WorkLuan\\EM.Web\\EM.Domain\\Enums\\Sexo.cs",
+              "RelativeDocumentMoniker": "EM.Domain\\Enums\\Sexo.cs",
+              "ToolTip": "C:\\WorkLuan\\EM.Web\\EM.Domain\\Enums\\Sexo.cs",
+              "RelativeToolTip": "EM.Domain\\Enums\\Sexo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T18:17:47.275Z",
               "EditorCaption": ""
             }
           ]

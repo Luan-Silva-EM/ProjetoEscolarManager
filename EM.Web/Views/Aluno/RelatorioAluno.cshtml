@@ -10,12 +10,12 @@
 <div class="dev-form">
 	<form class="row g-3 needs-validation" role="GerarRelatorio" action="Relatorio/GerarRelatorio" method="post">
 		<div>
-			<label for="Cidade">Filtro por Cidade</label>
-			<select name="ID_Cidade" class="form-select" aria-label="Default select example">
+			<label for="Estado">Filtro por Estado</label>
+			<select name="Uf" class="form-select">
 				<option selected>Selecione</option>
-				@foreach (var cidade in ViewBag.Cidades)
+				@foreach (var uf in Enum.GetValues(typeof(UF)))
 				{
-					<option value="@cidade.ID_Cidade">@cidade.Nome - @cidade.UF</option>
+					<option value="@uf">@uf</option>
 				}
 			</select>
 		</div>

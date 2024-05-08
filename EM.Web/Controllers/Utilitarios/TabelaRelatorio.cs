@@ -7,7 +7,7 @@ namespace EM.Web.Controllers.Utilitarios;
 
 public class TabelaRelatorio
 {
-	public byte[] GerarRelatorio(List<Aluno> alunos, int? ID_Cidade, Sexo? Sexo, string Ordem)
+	public byte[] GerarRelatorio(List<Aluno> alunos, int? ID_Cidade, Sexo? Sexo, string Ordem, string? Uf)
 	{
 
 		// Aplica os filtros se forem fornecidos
@@ -35,6 +35,7 @@ public class TabelaRelatorio
 			default:
 				break;
 		}
+
 		try
 		{
 			using MemoryStream ms = new();
@@ -71,6 +72,28 @@ public class TabelaRelatorio
 			document.Add(new Chunk(new iTextSharp.text.pdf.draw.LineSeparator(1f, 112f, BaseColor.BLACK, Element.ALIGN_CENTER, -1)));
 
 			document.Add(new Paragraph("\n"));
+
+
+			if (Uf != "Selecione" || Sexo.HasValue)
+			{
+				Font filterFont = FontFactory.GetFont("Arial", 12, Font.NORMAL);
+				document.Add(new Paragraph($"Filtros utilizados:"));
+				Paragraph filtros = new Paragraph($"Filtros utilizados:");
+				//if (Uf != null)
+				//{
+				//	alunos = alunos.Where(a => a.Cidade.UF == Uf).ToList();
+				//	Paragraph filterUf = new Paragraph($"Estado: {Uf}");
+				//	filterUf.Alignment = Element.ALIGN_LEFT;
+				//	document.Add(filterUf);
+				//}
+				if (Sexo.HasValue)
+				{
+					alunos = alunos.Where(a => a.Sexo == Sexo).ToList();
+					Paragraph filterSexo = new Paragraph($"Sexo: {(Sexo == 0 ? "Masculino" : "Feminino")}", filterFont);
+					filterSexo.Alignment = Element.ALIGN_LEFT;
+					document.Add(filterSexo);
+				}
+			}
 
 			PdfPTable tabelaDeEstudante = CriarTabelaDeEstudante(alunos);
 			tabelaDeEstudante.SpacingBefore = 15;
@@ -149,7 +172,7 @@ public class TabelaRelatorio
 		};
 
 		table.AddCell(cell);
-	}
+	}	
 
 	private static string CalcularIdade(DateTime dataNascimento)
 	{
