@@ -1,0 +1,40 @@
+﻿@using EM.Domain
+@{
+	ViewData["Title"] = "Cadastrar Cidade";
+}
+
+<div class="row">
+	<div class="col-6">
+		<h2>Tabela de Cidades</h2>
+	</div>
+	<div class="col text-end">
+		<a type="button" class="btn botao-btn-azul" asp-controller="Cidade" asp-action="CadastrarCidade">Adicionar Cidade</a>
+	</div>
+</div>
+<hr>
+
+<div class="col-md-6 mx-auto">
+	<table class="table table-striped table-hover table-bordered ">
+		<thead class="oi">
+			<tr>
+				<th class="col-1">Cidade</th>
+				<th class="col-1">UF</th>
+				<th class="col-1">Opção</th>
+			</tr>
+		</thead>
+
+		<tbody class="dev-container">
+			@foreach (Cidade cidade in Model)
+			{
+				<tr>
+					<td>@cidade.Nome</td>
+					<td>@cidade.UF</td>
+					<td>
+						<a type="button" class="btn botao-btn-azul" href="@Url.Action("CadastrarCidade", "Cidade", new { id = cidade.ID_Cidade })">Editar</a>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>
+

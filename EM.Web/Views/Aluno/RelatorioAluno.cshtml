@@ -1,0 +1,48 @@
+﻿@using EM.Domain
+@using EM.Domain.Enums
+@{
+	ViewData["Title"] = "Relatório";
+}
+
+<h1 style="text-align:center;">Relatório de Alunos</h1>
+
+<div class="dev-form">
+	<form class="row g-3 needs-validation" action="/" method="post">
+		<div>
+			<label for="cidade">Filtro por Cidade</label>
+			<select class="form-select" aria-label="Default select example">
+				<option selected>Selecione</option>
+				@foreach (var cidade in ViewBag.Cidades)
+				{
+					<option value="@cidade.ID_Cidade">@cidade.Nome - @cidade.UF</option>
+				}
+			</select>
+		</div>
+		<div class="col-md-6">
+			<label for="Sexo">Filtro por Sexo</label>
+			<select class="form-select" class="Sexo" aria-label="Default select example">
+				<option selected>Selecione</option>
+				@foreach (var obj in Enum.GetValues(typeof(Sexo)))
+				{
+					<option value="@obj">@obj</option>
+				}
+			</select>
+		</div>
+		<div class="col-md-6">
+			<label for="Ordem">Ordenar</label>
+			<select class="form-select" aria-label="Default select example">
+				<option selected>Selecione</option>
+				<option value="Nome">Nome</option>
+				<option value="DataNascimento">Data de Nascimento</option>
+				<option value="Cidade">Cidade</option>
+				<option value="UF">Estado</option>
+			</select>
+		</div>
+		<div>
+			<button type="submit" class="btn botao-btn-azul">Gerar Relatório</button>
+			<a class="btn botao-btn-cinza" asp-controller="Home" asp-action="Index">Voltar</a>
+		</div>
+	</form>
+</div>
+
+

@@ -1,0 +1,41 @@
+﻿@using EM.Domain
+@using EM.Domain.Enums
+@model EM.Domain.Cidade
+@{
+	bool isEdicao = ViewBag.IsEdicao ?? false;
+	string titulo = isEdicao ? "Edição de Cidade" : "Adicionar Cidade";
+
+	ViewData["Title"] = titulo;
+}
+
+<div class="dev-form">
+	<form class="row g-3 needs-validation" asp-controller="Cidade" asp-action="CadastrarCidade" method="post" novalidate>
+		<h1 class="text-center">@ViewData["Title"]</h1>
+		<input type="hidden" asp-for="ID_Cidade" />
+		<input type="hidden" id="isEdicao" name="isEdicao" value="@isEdicao" />
+		<div class="col-md-6">
+			<label asp-for="Nome" for="inputNome" class="form-label">Nome</label>
+			<input asp-for="Nome" class="form-control" id="inputCidade" name="Nome" placeholder="Nome da Cidade" required>
+			<div class="invalid-feedback">
+				Nome deve ser preenchido
+			</div>
+		</div>
+		<div class="col-md-6">
+			<label asp-for="UF" for="inputEstado" class="form-label">Estado</label>
+			<select asp-for="UF" id="inputEstado" class="form-select" name="UF" required>
+				<option selected disabled value="">Estado</option>
+				@foreach (var uf in Enum.GetValues(typeof(UF)))
+				{
+					<option value="@uf">@uf</option>
+				}
+			</select>
+			<div class="invalid-feedback">
+				Selecione uma UF
+			</div>
+		</div>
+		<div class="col-12">
+			<button type="submit" class="btn botao-btn-azul">Salvar</button>
+			<a class="btn botao-btn-cinza" asp-controller="Cidade" asp-action="Index">Voltar</a>
+		</div>
+	</form>
+</div>

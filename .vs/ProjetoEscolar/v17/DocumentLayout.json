@@ -1,0 +1,235 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\WorkLuan\\EM.Web\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|c:\\workluan\\em.web\\em.web\\controllers\\utilitarios\\tabelarelatorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|solutionrelative:em.web\\controllers\\utilitarios\\tabelarelatorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6D267B8-727F-4E2C-885B-3F47D0259B58}|EM.Repository\\EM.Repository.csproj|C:\\WorkLuan\\EM.Web\\em.repository\\bancodedados\\bancodedados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6D267B8-727F-4E2C-885B-3F47D0259B58}|EM.Repository\\EM.Repository.csproj|solutionrelative:em.repository\\bancodedados\\bancodedados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|C:\\WorkLuan\\EM.Web\\em.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|solutionrelative:em.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6D267B8-727F-4E2C-885B-3F47D0259B58}|EM.Repository\\EM.Repository.csproj|C:\\WorkLuan\\EM.Web\\em.repository\\repositorioaluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6D267B8-727F-4E2C-885B-3F47D0259B58}|EM.Repository\\EM.Repository.csproj|solutionrelative:em.repository\\repositorioaluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6D267B8-727F-4E2C-885B-3F47D0259B58}|EM.Repository\\EM.Repository.csproj|C:\\WorkLuan\\EM.Web\\em.repository\\repositoriocidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6D267B8-727F-4E2C-885B-3F47D0259B58}|EM.Repository\\EM.Repository.csproj|solutionrelative:em.repository\\repositoriocidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|C:\\WorkLuan\\EM.Web\\em.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|solutionrelative:em.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D75124C1-E583-486C-8872-E638A1738E33}|EM.Domain\\EM.Domain.csproj|C:\\WorkLuan\\EM.Web\\em.domain\\aluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D75124C1-E583-486C-8872-E638A1738E33}|EM.Domain\\EM.Domain.csproj|solutionrelative:em.domain\\aluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|C:\\WorkLuan\\EM.Web\\em.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|solutionrelative:em.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|C:\\WorkLuan\\EM.Web\\em.web\\views\\aluno\\relatorioaluno.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|solutionrelative:em.web\\views\\aluno\\relatorioaluno.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|C:\\WorkLuan\\EM.Web\\em.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|solutionrelative:em.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|C:\\WorkLuan\\EM.Web\\em.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|solutionrelative:em.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|C:\\WorkLuan\\EM.Web\\em.web\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|solutionrelative:em.web\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|C:\\WorkLuan\\EM.Web\\em.web\\controllers\\relatoriocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3ED612B1-AB57-4BE0-872F-EB8943E1B076}|EM.Web\\EM.Web.csproj|solutionrelative:em.web\\controllers\\relatoriocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 232,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BancoDeDados.cs",
+              "DocumentMoniker": "C:\\WorkLuan\\EM.Web\\EM.Repository\\BancoDeDados\\BancoDeDados.cs",
+              "RelativeDocumentMoniker": "EM.Repository\\BancoDeDados\\BancoDeDados.cs",
+              "ToolTip": "C:\\WorkLuan\\EM.Web\\EM.Repository\\BancoDeDados\\BancoDeDados.cs",
+              "RelativeToolTip": "EM.Repository\\BancoDeDados\\BancoDeDados.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T22:45:24.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RepositorioAluno.cs",
+              "DocumentMoniker": "C:\\WorkLuan\\EM.Web\\EM.Repository\\RepositorioAluno.cs",
+              "RelativeDocumentMoniker": "EM.Repository\\RepositorioAluno.cs",
+              "ToolTip": "C:\\WorkLuan\\EM.Web\\EM.Repository\\RepositorioAluno.cs",
+              "RelativeToolTip": "EM.Repository\\RepositorioAluno.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAqwFwAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T17:25:42.897Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TabelaRelatorio.cs",
+              "DocumentMoniker": "C:\\WorkLuan\\EM.Web\\EM.Web\\Controllers\\Utilitarios\\TabelaRelatorio.cs",
+              "RelativeDocumentMoniker": "EM.Web\\Controllers\\Utilitarios\\TabelaRelatorio.cs",
+              "ToolTip": "C:\\WorkLuan\\EM.Web\\EM.Web\\Controllers\\Utilitarios\\TabelaRelatorio.cs",
+              "RelativeToolTip": "EM.Web\\Controllers\\Utilitarios\\TabelaRelatorio.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T13:05:52.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\WorkLuan\\EM.Web\\EM.Web\\appsettings.json",
+              "RelativeDocumentMoniker": "EM.Web\\appsettings.json",
+              "ToolTip": "C:\\WorkLuan\\EM.Web\\EM.Web\\appsettings.json",
+              "RelativeToolTip": "EM.Web\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAACqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-07T22:46:09.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\WorkLuan\\EM.Web\\EM.Web\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "EM.Web\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\WorkLuan\\EM.Web\\EM.Web\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "EM.Web\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T17:23:37.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\WorkLuan\\EM.Web\\EM.Web\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "EM.Web\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\WorkLuan\\EM.Web\\EM.Web\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "EM.Web\\wwwroot\\js\\site.js",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAQwA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-05-07T17:16:03.929Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RelatorioController.cs",
+              "DocumentMoniker": "C:\\WorkLuan\\EM.Web\\EM.Web\\Controllers\\RelatorioController.cs",
+              "RelativeDocumentMoniker": "EM.Web\\Controllers\\RelatorioController.cs",
+              "ToolTip": "C:\\WorkLuan\\EM.Web\\EM.Web\\Controllers\\RelatorioController.cs",
+              "RelativeToolTip": "EM.Web\\Controllers\\RelatorioController.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAhwB8AAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T11:16:53.834Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\WorkLuan\\EM.Web\\EM.Web\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "EM.Web\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\WorkLuan\\EM.Web\\EM.Web\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "EM.Web\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAADQAAAAAAAAAAAAAAEYAAAB5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-07T12:14:32.496Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RelatorioAluno.cshtml",
+              "DocumentMoniker": "C:\\WorkLuan\\EM.Web\\EM.Web\\Views\\Aluno\\RelatorioAluno.cshtml",
+              "RelativeDocumentMoniker": "EM.Web\\Views\\Aluno\\RelatorioAluno.cshtml",
+              "ToolTip": "C:\\WorkLuan\\EM.Web\\EM.Web\\Views\\Aluno\\RelatorioAluno.cshtml",
+              "RelativeToolTip": "EM.Web\\Views\\Aluno\\RelatorioAluno.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-07T11:27:23.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\WorkLuan\\EM.Web\\EM.Web\\Program.cs",
+              "RelativeDocumentMoniker": "EM.Web\\Program.cs",
+              "ToolTip": "C:\\WorkLuan\\EM.Web\\EM.Web\\Program.cs",
+              "RelativeToolTip": "EM.Web\\Program.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T17:36:11.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RepositorioCidade.cs",
+              "DocumentMoniker": "C:\\WorkLuan\\EM.Web\\EM.Repository\\RepositorioCidade.cs",
+              "RelativeDocumentMoniker": "EM.Repository\\RepositorioCidade.cs",
+              "ToolTip": "C:\\WorkLuan\\EM.Web\\EM.Repository\\RepositorioCidade.cs",
+              "RelativeToolTip": "EM.Repository\\RepositorioCidade.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAwwBQAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T17:55:47.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Aluno.cs",
+              "DocumentMoniker": "C:\\WorkLuan\\EM.Web\\EM.Domain\\Aluno.cs",
+              "RelativeDocumentMoniker": "EM.Domain\\Aluno.cs",
+              "ToolTip": "C:\\WorkLuan\\EM.Web\\EM.Domain\\Aluno.cs",
+              "RelativeToolTip": "EM.Domain\\Aluno.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T17:21:30.588Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\WorkLuan\\EM.Web\\EM.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "EM.Web\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\WorkLuan\\EM.Web\\EM.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "EM.Web\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADIAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-07T10:49:37.588Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

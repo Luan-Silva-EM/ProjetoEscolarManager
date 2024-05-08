@@ -1,0 +1,98 @@
+﻿@using EM.Repository
+@using EM.Domain
+@{
+	ViewData["Title"] = "Home Page";
+}
+
+<!--Inicio-->
+<div class="row">
+	<div class="col-6">
+		<h2>Tabela de Alunos </h2>
+	</div>
+	<div class="col text-end">
+		<a type="button" class="btn botao-btn-azul" asp-controller="Aluno" asp-action="CadastrarAluno">Adicionar Aluno</a>
+	</div>
+</div>
+<hr>
+
+<!--checkbox-->
+<div class="d-flex align-items-center">
+	<div class="form-check-inline">
+		<h6><strong>Opções de Busca:</strong></h6>
+	</div>
+	<div class="form-check-inline">
+		<input class="form-check-input" type="radio" name="searchOptions" id="searchMatricula" value="matricula" onchange="updateSearchType()">
+		<label class="form-check-label" for="searchMatricula">Matrícula</label>
+	</div>
+	<div class="form-check-inline">
+		<input class="form-check-input" type="radio" name="searchOptions" id="searchNome" value="nome" onchange="updateSearchType()">
+		<label class="form-check-label" for="searchNome">Nome</label>
+	</div>
+</div>
+
+<!--caixaTexto-->
+<div class="row">
+	<form class="d-flex col-6 needs-validation" role="search" action="/Aluno/Search" method="post" novalidate>
+		<input class="form-control col me-2 rounded" type="search" placeholder="Matrícula ou nome do aluno..." aria-label="Search" name="searchTerm" required>
+		<input class="col" type="hidden" name="searchType" id="searchType">
+		<button class="btn botao-btn-azul md-1 rounded" type="submit">Buscar</button>
+	</form>
+	<a type="button" class="btn botao-btn-azul ms-auto" style="max-width:230px; margin-right:13px;" asp-area="" asp-controller="Relatorio" asp-action="GerarRelatorio" target="_blank">Relatório de todos os alunos</a>
+</div>
+<p></p>
+
+<!--Tabela-->
+<table id="tabelaAlunos" class="table table-striped table-hover table-bordered">
+	<thead class="oi">
+		<tr>
+			<th scope="col">Matrícula</th>
+			<th scope="col">Nome</th>
+			<th scope="col">Sexo</th>
+			<th scope="col">Data de Nascimento</th>
+			<th scope="col">Cidade</th>
+			<th scope="col">UF</th>
+			<th scope="col">CPF</th>
+			<th scope="col">Opções</th>
+		</tr>
+	</thead>
+
+	<tbody class="dev-container">
+		@foreach (Aluno aluno in Model)
+		{
+			<tr class="text-center">
+				<td>@aluno.Matricula</td>
+				<td class="text-start">@aluno.Nome</td>
+				<td>@aluno.Sexo</td>
+				<td>@aluno.DataNascimento.ToString("dd/MM/yyyy")</td>
+				<td>@aluno.Cidade.Nome</td>
+				<td>@aluno.Cidade.UF</td>
+				<td>@aluno.CPF</td>
+				<td>
+					<a type="button" class="btn botao-btn-azul" href="@Url.Action("CadastrarAluno", "Aluno", new{ id = aluno.Matricula})">Editar</a>
+					<button type="submit" class="btn botao-btn-cinza" data-bs-toggle="modal" data-bs-target="#excluir-@aluno.Matricula">Excluir</button>
+				</td>
+			</tr>
+
+			<div class="modal fade" id="excluir-@aluno.Matricula" tabindex="-1" aria-labelledby="excluir" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h1 class="modal-title fs-5" id="exampleModalLabel">Excluir</h1>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body col-7">
+							Tem certaza que deseja excluir?
+						</div>
+						<div class="modal-footer">
+							<form asp-action="RemoveAluno" asp-controller="Aluno" method="post">
+								<input type="hidden" name="matricula" value="@aluno.Matricula" />
+								<button type="button" class="btn btn-secondary " data-bs-dismiss="modal">Cancelar</button>
+								<button type="submit" class="btn botao-btn-azul">Excluir</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		}
+	</tbody>
+</table>

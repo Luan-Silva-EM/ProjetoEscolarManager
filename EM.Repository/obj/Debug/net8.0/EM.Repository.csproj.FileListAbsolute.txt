@@ -1,0 +1,30 @@
+C:\WorkLuan\EM.Web\EM.Repository\obj\Debug\net8.0\EM.Repository.csproj.AssemblyReference.cache
+C:\WorkLuan\EM.Web\EM.Repository\obj\Debug\net8.0\EM.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\WorkLuan\EM.Web\EM.Repository\obj\Debug\net8.0\EM.Repository.AssemblyInfoInputs.cache
+C:\WorkLuan\EM.Web\EM.Repository\obj\Debug\net8.0\EM.Repository.AssemblyInfo.cs
+C:\WorkLuan\EM.Web\EM.Repository\obj\Debug\net8.0\EM.Repository.csproj.CoreCompileInputs.cache
+C:\WorkLuan\EM.Web\EM.Repository\bin\Debug\net8.0\EM.Repository.deps.json
+C:\WorkLuan\EM.Web\EM.Repository\bin\Debug\net8.0\EM.Repository.dll
+C:\WorkLuan\EM.Web\EM.Repository\bin\Debug\net8.0\EM.Repository.pdb
+C:\WorkLuan\EM.Web\EM.Repository\bin\Debug\net8.0\EM.Domain.dll
+C:\WorkLuan\EM.Web\EM.Repository\bin\Debug\net8.0\EM.Domain.pdb
+C:\WorkLuan\EM.Web\EM.Repository\obj\Debug\net8.0\EM.Repos.38E60255.Up2Date
+C:\WorkLuan\EM.Web\EM.Repository\obj\Debug\net8.0\EM.Repository.dll
+C:\WorkLuan\EM.Web\EM.Repository\obj\Debug\net8.0\refint\EM.Repository.dll
+C:\WorkLuan\EM.Web\EM.Repository\obj\Debug\net8.0\EM.Repository.pdb
+C:\WorkLuan\EM.Web\EM.Repository\obj\Debug\net8.0\ref\EM.Repository.dll
+C:\Nova pasta\EM.Web\EM.Repository\bin\Debug\net8.0\EM.Repository.deps.json
+C:\Nova pasta\EM.Web\EM.Repository\bin\Debug\net8.0\EM.Repository.dll
+C:\Nova pasta\EM.Web\EM.Repository\bin\Debug\net8.0\EM.Repository.pdb
+C:\Nova pasta\EM.Web\EM.Repository\bin\Debug\net8.0\EM.Domain.dll
+C:\Nova pasta\EM.Web\EM.Repository\bin\Debug\net8.0\EM.Domain.pdb
+C:\Nova pasta\EM.Web\EM.Repository\obj\Debug\net8.0\EM.Repository.csproj.AssemblyReference.cache
+C:\Nova pasta\EM.Web\EM.Repository\obj\Debug\net8.0\EM.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Nova pasta\EM.Web\EM.Repository\obj\Debug\net8.0\EM.Repository.AssemblyInfoInputs.cache
+C:\Nova pasta\EM.Web\EM.Repository\obj\Debug\net8.0\EM.Repository.AssemblyInfo.cs
+C:\Nova pasta\EM.Web\EM.Repository\obj\Debug\net8.0\EM.Repository.csproj.CoreCompileInputs.cache
+C:\Nova pasta\EM.Web\EM.Repository\obj\Debug\net8.0\EM.Repos.38E60255.Up2Date
+C:\Nova pasta\EM.Web\EM.Repository\obj\Debug\net8.0\EM.Repository.dll
+C:\Nova pasta\EM.Web\EM.Repository\obj\Debug\net8.0\refint\EM.Repository.dll
+C:\Nova pasta\EM.Web\EM.Repository\obj\Debug\net8.0\EM.Repository.pdb
+C:\Nova pasta\EM.Web\EM.Repository\obj\Debug\net8.0\ref\EM.Repository.dll
