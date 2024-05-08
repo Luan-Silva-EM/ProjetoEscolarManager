@@ -28,3 +28,4 @@ C:\Nova pasta\EM.Web\EM.Repository\obj\Debug\net8.0\EM.Repository.dll
 C:\Nova pasta\EM.Web\EM.Repository\obj\Debug\net8.0\refint\EM.Repository.dll
 C:\Nova pasta\EM.Web\EM.Repository\obj\Debug\net8.0\EM.Repository.pdb
 C:\Nova pasta\EM.Web\EM.Repository\obj\Debug\net8.0\ref\EM.Repository.dll
+C:\WorkLuan\EM.Web\EM.Repository\obj\Debug\net8.0\EM.Repository.sourcelink.json

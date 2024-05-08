@@ -52,13 +52,13 @@ namespace EM.Repository
 			using DbCommand cmd = conn.CreateCommand();
 
 			cmd.CommandText = @"
-        UPDATE ALUNO 
-        SET NOME = @Nome, 
-            DATANASCIMENTO = @DataNascimento, 
-            SEXO = @Sexo, 
-            CPF = @CPF, 
-            CIDADE_ID = @Cidade_ID 
-        WHERE MATRICULA = @Matricula";
+				UPDATE ALUNO 
+				SET NOME = @Nome, 
+				DATANASCIMENTO = @DataNascimento, 
+				SEXO = @Sexo, 
+				CPF = @CPF, 
+				CIDADE_ID = @Cidade_ID 
+				WHERE MATRICULA = @Matricula";
 
 			cmd.Parameters.CreateParameter("@Nome", aluno.Nome);
 			cmd.Parameters.CreateParameter("@DataNascimento", aluno.DataNascimento);

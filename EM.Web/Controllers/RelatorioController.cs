@@ -1,9 +1,8 @@
-﻿using EM.Domain.Interfaces;
-using EM.Domain;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ViewEngines;
-using EM.Repository;
+﻿using EM.Domain;
+using EM.Domain.Enums;
+using EM.Domain.Interfaces;
 using EM.Web.Controllers.Utilitarios;
+using Microsoft.AspNetCore.Mvc;
 
 namespace EM.Web.Controllers
 {
@@ -29,10 +28,19 @@ namespace EM.Web.Controllers
 		{
 			List<Aluno> alunos = _repositorioAluno.GetAll().ToList();
 
-			byte[] pdfBytes = tabelaRelatorio.GerarRelatorio(alunos);
+			byte[] pdfBytes = tabelaRelatorio.GerarRelatorio(alunos, null, null, null);
 
 			return File(pdfBytes, "application/pdf");
+		}
 
+		[HttpPost]
+		public IActionResult GerarRelatorio(int? ID_Cidade, Sexo? Sexo, string Ordem)
+		{
+			List<Aluno> alunos = _repositorioAluno.GetAll().ToList();
+
+			byte[] pdfBytes = tabelaRelatorio.GerarRelatorio(alunos, ID_Cidade, Sexo, Ordem);
+
+			return File(pdfBytes, "application/pdf");
 		}
 	}
 }

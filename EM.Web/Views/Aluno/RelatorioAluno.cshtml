@@ -1,5 +1,6 @@
 ﻿@using EM.Domain
 @using EM.Domain.Enums
+@model EM.Domain.Aluno
 @{
 	ViewData["Title"] = "Relatório";
 }
@@ -7,10 +8,10 @@
 <h1 style="text-align:center;">Relatório de Alunos</h1>
 
 <div class="dev-form">
-	<form class="row g-3 needs-validation" action="/" method="post">
+	<form class="row g-3 needs-validation" role="GerarRelatorio" action="Relatorio/GerarRelatorio" method="post">
 		<div>
-			<label for="cidade">Filtro por Cidade</label>
-			<select class="form-select" aria-label="Default select example">
+			<label for="Cidade">Filtro por Cidade</label>
+			<select name="ID_Cidade" class="form-select" aria-label="Default select example">
 				<option selected>Selecione</option>
 				@foreach (var cidade in ViewBag.Cidades)
 				{
@@ -20,7 +21,7 @@
 		</div>
 		<div class="col-md-6">
 			<label for="Sexo">Filtro por Sexo</label>
-			<select class="form-select" class="Sexo" aria-label="Default select example">
+			<select name="Sexo" class="form-select" class="Sexo" aria-label="Default select example">
 				<option selected>Selecione</option>
 				@foreach (var obj in Enum.GetValues(typeof(Sexo)))
 				{
@@ -29,17 +30,16 @@
 			</select>
 		</div>
 		<div class="col-md-6">
-			<label for="Ordem">Ordenar</label>
-			<select class="form-select" aria-label="Default select example">
+			<label for="ordem">Ordenar</label>
+			<select id="Ordem" name="Ordem" class="form-select">
 				<option selected>Selecione</option>
 				<option value="Nome">Nome</option>
-				<option value="DataNascimento">Data de Nascimento</option>
 				<option value="Cidade">Cidade</option>
 				<option value="UF">Estado</option>
 			</select>
 		</div>
 		<div>
-			<button type="submit" class="btn botao-btn-azul">Gerar Relatório</button>
+			<button type="submit" class="btn botao-btn-azul" asp-area="" asp-controller="Relatorio" asp-action="GerarRelatorio">Gerar Relatório</button>
 			<a class="btn botao-btn-cinza" asp-controller="Home" asp-action="Index">Voltar</a>
 		</div>
 	</form>

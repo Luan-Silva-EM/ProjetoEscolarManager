@@ -144,3 +144,4 @@ C:\Nova pasta\EM.Web\EM.Web\obj\Debug\net8.0\EM.Web.genruntimeconfig.cache
 C:\Nova pasta\EM.Web\EM.Web\obj\Debug\net8.0\ref\EM.Web.dll
 C:\WorkLuan\EM.Web\EM.Web\bin\Debug\net8.0\BouncyCastle.Crypto.dll
 C:\WorkLuan\EM.Web\EM.Web\bin\Debug\net8.0\itextsharp.dll
+C:\WorkLuan\EM.Web\EM.Web\obj\Debug\net8.0\EM.Web.sourcelink.json
