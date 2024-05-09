@@ -12,7 +12,7 @@
 		<div>
 			<label for="Estado">Filtro por Estado</label>
 			<select name="Uf" class="form-select">
-				<option selected>Selecione</option>
+				<option selected value="">Selecione</option>
 				@foreach (var uf in Enum.GetValues(typeof(UF)))
 				{
 					<option value="@uf">@uf</option>
@@ -21,8 +21,8 @@
 		</div>
 		<div class="col-md-6">
 			<label for="Sexo">Filtro por Sexo</label>
-			<select name="Sexo" class="form-select" class="Sexo" aria-label="Default select example">
-				<option selected>Selecione</option>
+			<select name="Sexo" class="form-select">
+				<option value="" selected>Selecione</option>
 				@foreach (var obj in Enum.GetValues(typeof(Sexo)))
 				{
 					<option value="@obj">@obj</option>
@@ -38,9 +38,10 @@
 				<option value="UF">Estado</option>
 			</select>
 		</div>
-		<div>
+		<div class=" d-flex">
 			<button type="submit" class="btn botao-btn-azul" asp-area="" asp-controller="Relatorio" asp-action="GerarRelatorio">Gerar Relatório</button>
-			<a class="btn botao-btn-cinza" asp-controller="Home" asp-action="Index">Voltar</a>
+			<a class="btn botao-btn-cinza" style="margin-left:3px;" asp-controller="Relatorio" asp-action="LimparFiltros">Limpar Filtro</a>
+			<a class="col-1 ms-auto btn botao-btn-cinza" asp-controller="Home" asp-action="Index">Voltar</a>
 		</div>
 	</form>
 </div>

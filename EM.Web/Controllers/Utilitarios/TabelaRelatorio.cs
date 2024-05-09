@@ -74,18 +74,18 @@ public class TabelaRelatorio
 			document.Add(new Paragraph("\n"));
 
 
-			if (Uf != "Selecione" || Sexo.HasValue)
+			if (Uf != null || Sexo.HasValue)
 			{
 				Font filterFont = FontFactory.GetFont("Arial", 12, Font.NORMAL);
 				document.Add(new Paragraph($"Filtros utilizados:"));
 				Paragraph filtros = new Paragraph($"Filtros utilizados:");
-				//if (Uf != null)
-				//{
-				//	alunos = alunos.Where(a => a.Cidade.UF == Uf).ToList();
-				//	Paragraph filterUf = new Paragraph($"Estado: {Uf}");
-				//	filterUf.Alignment = Element.ALIGN_LEFT;
-				//	document.Add(filterUf);
-				//}
+				if (Uf != null)
+				{
+					alunos = alunos.Where(a => a.Cidade.UF == Uf).ToList();
+					Paragraph filterUf = new Paragraph($"Estado: {Uf}");
+					filterUf.Alignment = Element.ALIGN_LEFT;
+					document.Add(filterUf);
+				}
 				if (Sexo.HasValue)
 				{
 					alunos = alunos.Where(a => a.Sexo == Sexo).ToList();
@@ -121,7 +121,7 @@ public class TabelaRelatorio
 		Font fonteConteudo = new(bf, 9, Font.NORMAL);
 		Font fonteTitulo = new(bf, 12, Font.NORMAL, corFonteTitulo);
 
-		PdfPTable tabela = new([12, 27, 14, 11, 10, 6, 18]) { WidthPercentage = 100 };
+		PdfPTable tabela = new([11, 24, 8, 11, 15, 6, 15]) { WidthPercentage = 100 };
 
 		tabela.DefaultCell.BackgroundColor = corFundoTitulo;
 		tabela.DefaultCell.FixedHeight = 30;
@@ -144,7 +144,7 @@ public class TabelaRelatorio
 			Phrase Nome = new(aluno.Nome, fonteConteudo);
 			AdicionarCelulaTabela(tabela, Nome, horizontalAlignment: Element.ALIGN_LEFT);
 
-			Phrase Sexo = new(aluno.Sexo.ToString(), fonteConteudo);
+			Phrase Sexo = new(aluno.Sexo == Domain.Enums.Sexo.Masculino ? "M": "F".ToString(), fonteConteudo);
 			AdicionarCelulaTabela(tabela, Sexo);
 
 			Phrase Idade = new(CalcularIdade(aluno.DataNascimento), fonteConteudo);
@@ -172,7 +172,7 @@ public class TabelaRelatorio
 		};
 
 		table.AddCell(cell);
-	}	
+	}
 
 	private static string CalcularIdade(DateTime dataNascimento)
 	{

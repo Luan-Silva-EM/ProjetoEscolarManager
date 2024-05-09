@@ -10,25 +10,29 @@ namespace EM.Web.Controllers
 	{
 		private readonly IRepositorioAbstrato<Cidade> _repositorioCidade;
 		private readonly IRepositorioAbstrato<Aluno> _repositorioAluno;
-		private readonly TabelaRelatorio tabelaRelatorio;
+		private readonly TabelaRelatorio _tabelaRelatorio;
 
 		public RelatorioController(IRepositorioAbstrato<Cidade> repositorioCidade, IRepositorioAbstrato<Aluno> repositorioAluno, TabelaRelatorio tabelaRelatorio)
 		{
 			_repositorioCidade = repositorioCidade;
 			_repositorioAluno = repositorioAluno;
-			this.tabelaRelatorio = tabelaRelatorio;
+			_tabelaRelatorio = tabelaRelatorio;
 		}
 		public IActionResult RelatorioAluno()
 		{
 			ViewBag.cidades = _repositorioCidade.GetAll().ToList();
 			return View("/Views/Aluno/RelatorioAluno.cshtml");
 		}
+		public IActionResult LimparFiltros()
+		{
+			return RedirectToAction(nameof(RelatorioAluno));
+		}
 
 		public IActionResult GerarRelatorio()
 		{
 			List<Aluno> alunos = _repositorioAluno.GetAll().ToList();
 
-			byte[] pdfBytes = tabelaRelatorio.GerarRelatorio(alunos, null, null, null, null);
+			byte[] pdfBytes = _tabelaRelatorio.GerarRelatorio(alunos, null, null, null, null);
 
 			return File(pdfBytes, "application/pdf");
 		}
@@ -38,7 +42,7 @@ namespace EM.Web.Controllers
 		{
 			List<Aluno> alunos = _repositorioAluno.GetAll().ToList();
 
-			byte[] pdfBytes = tabelaRelatorio.GerarRelatorio(alunos, ID_Cidade, Sexo, Ordem, Uf);
+			byte[] pdfBytes = _tabelaRelatorio.GerarRelatorio(alunos, ID_Cidade, Sexo, Ordem, Uf);
 
 			return File(pdfBytes, "application/pdf");
 		}
