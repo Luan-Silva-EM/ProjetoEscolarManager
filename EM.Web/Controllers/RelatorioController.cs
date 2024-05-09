@@ -2,6 +2,7 @@
 using EM.Domain.Enums;
 using EM.Domain.Interfaces;
 using EM.Web.Controllers.Utilitarios;
+using iTextSharp.text;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EM.Web.Controllers
@@ -32,17 +33,19 @@ namespace EM.Web.Controllers
 		{
 			List<Aluno> alunos = _repositorioAluno.GetAll().ToList();
 
-			byte[] pdfBytes = _tabelaRelatorio.GerarRelatorio(alunos, null, null, null, null);
+			byte[] pdfBytes = _tabelaRelatorio.GerarRelatorio(alunos, null, null, null, null, false);
 
 			return File(pdfBytes, "application/pdf");
 		}
 
 		[HttpPost]
-		public IActionResult GerarRelatorio(int? ID_Cidade, Sexo? Sexo, string Ordem, string? Uf)
+		public IActionResult GerarRelatorio(Document document, int? ID_Cidade, Sexo? Sexo, string ordem, string? Uf, bool linhasZebradas)
 		{
 			List<Aluno> alunos = _repositorioAluno.GetAll().ToList();
 
-			byte[] pdfBytes = _tabelaRelatorio.GerarRelatorio(alunos, ID_Cidade, Sexo, Ordem, Uf);
+			alunos = _tabelaRelatorio.AplicarFiltros(document, alunos, ID_Cidade, Sexo, ordem, Uf);
+
+			byte[] pdfBytes = _tabelaRelatorio.GerarRelatorio(alunos, ID_Cidade, Sexo, ordem, Uf, linhasZebradas);
 
 			return File(pdfBytes, "application/pdf");
 		}
