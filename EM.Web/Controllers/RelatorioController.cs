@@ -33,19 +33,19 @@ namespace EM.Web.Controllers
 		{
 			List<Aluno> alunos = _repositorioAluno.GetAll().ToList();
 
-			byte[] pdfBytes = _tabelaRelatorio.GerarRelatorio(alunos, null, null, null, null, false);
+			byte[] pdfBytes = _tabelaRelatorio.GerarRelatorio(alunos, null, null, false, null);
 
 			return File(pdfBytes, "application/pdf");
 		}
 
 		[HttpPost]
-		public IActionResult GerarRelatorio(Document document, int? ID_Cidade, Sexo? Sexo, string ordem, string? Uf, bool linhasZebradas)
+		public IActionResult GerarRelatorio(Document document, int? ID_Cidade, Sexo? sexo, string ordem, string? uf, bool linhasZebradas, string horizontal)
 		{
 			List<Aluno> alunos = _repositorioAluno.GetAll().ToList();
 
-			alunos = _tabelaRelatorio.AplicarFiltros(document, alunos, ID_Cidade, Sexo, ordem, Uf);
+			alunos = _tabelaRelatorio.AplicarFiltros(document, alunos, ID_Cidade, sexo, ordem, uf);
 
-			byte[] pdfBytes = _tabelaRelatorio.GerarRelatorio(alunos, ID_Cidade, Sexo, ordem, Uf, linhasZebradas);
+			byte[] pdfBytes = _tabelaRelatorio.GerarRelatorio(alunos, sexo, uf, linhasZebradas, horizontal);
 
 			return File(pdfBytes, "application/pdf");
 		}

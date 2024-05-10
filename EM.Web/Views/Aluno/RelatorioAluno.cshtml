@@ -28,16 +28,6 @@
 					<option value="@obj">@obj</option>
 				}
 			</select>
-			<p></p>
-			<div class="form-check form-switch">
-				<input class="form-check-input" type="checkbox" name="linhasZebradas" autocomplete="off" value="true" role="switch" id="flexSwitchCheckDefault">
-				<label class="form-check-label" for="flexSwitchCheckDefault">Linhas zebradas</label>
-			</div>
-			<div class="form-check form-switch">
-				<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-				<label class="form-check-label" for="flexSwitchCheckDefault">Horizontal</label>
-			</div>
-
 		</div>
 		<div class="col-md-6">
 			<label for="ordem">Ordenar</label>
@@ -48,10 +38,21 @@
 				<option value="UF">Estado</option>
 			</select>
 		</div>
+		<div>
+			<div class="form-check form-switch">
+				<input class="form-check-input" type="checkbox" name="linhasZebradas" autocomplete="off" value="true"  id="linhaZebrada">
+				<label class="form-check-label" for="linhaZebrada">Linhas zebradas</label>
+			</div>
+			<div class="form-check form-switch">
+				<input class="form-check-input" type="checkbox" name="horizontal" autocomplete="off" value="horizontal" id="horizontal">
+				<label class="form-check-label" for="horizontal">Horizontal</label>
+			</div>
+		</div>
+			
 		<div class=" d-flex">
-			<button type="submit" class="btn botao-btn-azul" asp-area="" asp-controller="Relatorio" asp-action="GerarRelatorio">Gerar Relatório</button>
-			<a class="btn botao-btn-cinza" style="margin-left:3px;" asp-controller="Relatorio" asp-action="LimparFiltros">Limpar Filtro</a>
-			<a class="col-1 ms-auto btn botao-btn-cinza" asp-controller="Home" asp-action="Index">Voltar</a>
+			<a class="btn botao-btn-cinza"  asp-controller="Relatorio" asp-action="LimparFiltros">Limpar Filtro</a>
+			<a class="btn botao-btn-cinza" style="margin-left:3px;" asp-controller="Home" asp-action="Index">Voltar</a>
+			<button type="submit" class=" ms-auto btn botao-btn-azul" asp-area="" asp-controller="Relatorio" asp-action="GerarRelatorio">Gerar Relatório</button>
 		</div>
 	</form>
 </div>

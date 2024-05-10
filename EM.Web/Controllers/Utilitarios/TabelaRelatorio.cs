@@ -1,5 +1,4 @@
-﻿using System.Runtime.Intrinsics.Arm;
-using EM.Domain;
+﻿using EM.Domain;
 using EM.Domain.Enums;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
@@ -8,12 +7,13 @@ namespace EM.Web.Controllers.Utilitarios;
 
 public class TabelaRelatorio
 {
-	public byte[] GerarRelatorio(List<Aluno> alunos, int? ID_Cidade, Sexo? sexo, string ordem, string? uf, bool linhasZebradas)
+	public byte[] GerarRelatorio(List<Aluno> alunos, Sexo? sexo, string? uf, bool linhasZebradas, string? horizontal)
 	{
 		try
 		{
 			using MemoryStream ms = new();
-			Document document = new(PageSize.A4);
+			Document document = (horizontal == "horizontal") ? document = new(PageSize.A4.Rotate(), 25, 25, 20, 25) : document = new(PageSize.A4,25,25,20,25);
+
 			PdfWriter writer = PdfWriter.GetInstance(document, ms);
 			document.Open();
 
@@ -23,7 +23,7 @@ public class TabelaRelatorio
 			canvas.Rectangle(0, 0, document.PageSize.Width, document.PageSize.Height);
 			canvas.RestoreState();
 
-			PdfPTable layoutTable = new([3, 7])
+			PdfPTable layoutTable = new([3,7,3])
 			{
 				WidthPercentage = 100
 			};
@@ -31,22 +31,36 @@ public class TabelaRelatorio
 			string logoPath = "C:\\WorkLuan\\EM.Web\\EM.Web\\wwwroot\\images\\escolar_manager_logo (2).png";
 			Image logo = Image.GetInstance(logoPath);
 			logo.ScaleToFit(100, 100);
-			PdfPCell logoCell = new(logo) { Border = Rectangle.NO_BORDER };
+			PdfPCell logoCell = new(logo) { 
+				Border = Rectangle.NO_BORDER,
+				HorizontalAlignment = Element.ALIGN_CENTER, 
+				VerticalAlignment = Element.ALIGN_MIDDLE
+			};
 			layoutTable.AddCell(logoCell);
 
 			BaseFont bf = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
 			Font fonteTitulo = new(bf, 24, Font.BOLD);
-			Paragraph title = new("Relatório de Alunos", fonteTitulo);
-			PdfPCell titleCell = new();
-			titleCell.AddElement(title);
-			titleCell.Border = Rectangle.NO_BORDER;
+
+			PdfPCell titleCell = new(new Phrase("Relatório de Alunos", fonteTitulo))
+			{
+				Border = Rectangle.NO_BORDER,
+				HorizontalAlignment = Element.ALIGN_CENTER,
+				VerticalAlignment = Element.ALIGN_MIDDLE
+			};
 			layoutTable.AddCell(titleCell);
 
+			PdfPCell invisibleCell = new()
+			{
+				Border = Rectangle.NO_BORDER
+
+			}; 
+			layoutTable.AddCell(invisibleCell);
+
+			layoutTable.SpacingAfter = 20;
 			document.Add(layoutTable);
 
 			document.Add(new Chunk(new iTextSharp.text.pdf.draw.LineSeparator(1f, 112f, BaseColor.BLACK, Element.ALIGN_CENTER, -1)));
 
-			document.Add(new Paragraph("\n"));
 
 			if (uf != null || sexo.HasValue)
 			{
@@ -74,7 +88,7 @@ public class TabelaRelatorio
 			tabelaDeEstudante.HeaderRows = 1;
 			document.Add(tabelaDeEstudante);
 
-			
+
 
 			document.Close();
 
@@ -118,7 +132,7 @@ public class TabelaRelatorio
 		}
 		bool isZebrado = linhasZebradas;
 
-			int count = 0;
+		int count = 0;
 
 		foreach (Aluno aluno in alunos)
 		{
@@ -146,7 +160,7 @@ public class TabelaRelatorio
 			Phrase CPF = new(aluno.CPF, fonteConteudo);
 			AdicionarCelulaTabela(tabela, CPF, backgroundColor);
 
-			if (isZebrado || count!=0)
+			if (isZebrado || count != 0)
 			{
 				isZebrado = !isZebrado;
 				count++;
