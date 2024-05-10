@@ -116,11 +116,13 @@ public class TabelaRelatorio
 		{
 			tabela.DefaultCell.BackgroundColor = BaseColor.LIGHT_GRAY;
 		}
-
 		bool isZebrado = linhasZebradas;
+
+			int count = 0;
 
 		foreach (Aluno aluno in alunos)
 		{
+
 			BaseColor? backgroundColor = isZebrado ? BaseColor.LIGHT_GRAY : null;
 
 			Phrase Matricula = new(aluno.Matricula.ToString(), fonteConteudo);
@@ -144,7 +146,11 @@ public class TabelaRelatorio
 			Phrase CPF = new(aluno.CPF, fonteConteudo);
 			AdicionarCelulaTabela(tabela, CPF, backgroundColor);
 
-			isZebrado = !isZebrado;
+			if (isZebrado || count!=0)
+			{
+				isZebrado = !isZebrado;
+				count++;
+			}
 		}
 		return tabela;
 	}
