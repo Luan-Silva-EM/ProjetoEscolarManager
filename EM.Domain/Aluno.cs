@@ -21,5 +21,20 @@ namespace EM.Domain
 
 		[CpfValidation]
 		public string? CPF { get; set; }
+
+		public override bool Equals(object? obj)
+		{
+			return obj is Aluno aluno && Matricula == aluno.Matricula && Nome == aluno.Nome && Sexo == aluno.Sexo && DataNascimento == aluno.DataNascimento && Cidade == aluno.Cidade && CPF == aluno.CPF;
+		}
+
+		public override int GetHashCode()
+		{
+			return base.GetHashCode();
+		}
+
+		public override string? ToString()
+		{
+			return base.ToString();
+		}
 	}
 }

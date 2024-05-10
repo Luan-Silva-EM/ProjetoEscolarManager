@@ -13,54 +13,12 @@ public class TabelaRelatorio
 		{
 			using MemoryStream ms = new();
 			Document document = (horizontal == "horizontal") ? document = new(PageSize.A4.Rotate(), 25, 25, 20, 25) : document = new(PageSize.A4,25,25,20,25);
-
 			PdfWriter writer = PdfWriter.GetInstance(document, ms);
+			writer.PageEvent = new DefaultEvent();
 			document.Open();
 
 
-			PdfContentByte canvas = writer.DirectContentUnder;
-			canvas.SaveState();
-			canvas.Rectangle(0, 0, document.PageSize.Width, document.PageSize.Height);
-			canvas.RestoreState();
-
-			PdfPTable layoutTable = new([3,7,3])
-			{
-				WidthPercentage = 100
-			};
-
-			string logoPath = "C:\\WorkLuan\\EM.Web\\EM.Web\\wwwroot\\images\\escolar_manager_logo (2).png";
-			Image logo = Image.GetInstance(logoPath);
-			logo.ScaleToFit(100, 100);
-			PdfPCell logoCell = new(logo) { 
-				Border = Rectangle.NO_BORDER,
-				HorizontalAlignment = Element.ALIGN_CENTER, 
-				VerticalAlignment = Element.ALIGN_MIDDLE
-			};
-			layoutTable.AddCell(logoCell);
-
-			BaseFont bf = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
-			Font fonteTitulo = new(bf, 24, Font.BOLD);
-
-			PdfPCell titleCell = new(new Phrase("Relatório de Alunos", fonteTitulo))
-			{
-				Border = Rectangle.NO_BORDER,
-				HorizontalAlignment = Element.ALIGN_CENTER,
-				VerticalAlignment = Element.ALIGN_MIDDLE
-			};
-			layoutTable.AddCell(titleCell);
-
-			PdfPCell invisibleCell = new()
-			{
-				Border = Rectangle.NO_BORDER
-
-			}; 
-			layoutTable.AddCell(invisibleCell);
-
-			layoutTable.SpacingAfter = 20;
-			document.Add(layoutTable);
-
-			document.Add(new Chunk(new iTextSharp.text.pdf.draw.LineSeparator(1f, 112f, BaseColor.BLACK, Element.ALIGN_CENTER, -1)));
-
+			
 
 			if (uf != null || sexo.HasValue)
 			{

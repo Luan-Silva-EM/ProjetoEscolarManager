@@ -1,6 +1,5 @@
 ﻿using EM.Domain;
 using EM.Domain.Interfaces;
-using EM.Repository;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EM.Web.Controllers
@@ -84,6 +83,5 @@ namespace EM.Web.Controllers
 			// Se searchType for nulo ou não corresponder a "matricula" ou "nome", retorna uma visualização vazia
 			return View("Views/Home/Index.cshtml", new List<Aluno>());
 		}
-
 	}
 }
