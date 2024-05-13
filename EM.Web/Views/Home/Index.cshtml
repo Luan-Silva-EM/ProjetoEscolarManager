@@ -10,7 +10,7 @@
 		<h2>Tabela de Alunos </h2>
 	</div>
 	<div class="col text-end">
-		<a type="button" class="btn botao-btn-azul" asp-controller="Aluno" asp-action="CadastrarAluno">Adicionar Aluno</a>
+		<a type="button" class="btn botao-btn-azul" asp-controller="Aluno" asp-action="CadastreAluno">Adicionar Aluno</a>
 	</div>
 </div>
 <hr>
@@ -32,8 +32,8 @@
 
 <!--caixaTexto-->
 <div class="row">
-	<form class="d-flex col-6 needs-validation" role="search" action="/Aluno/Search" method="post" novalidate> 
-		<input class="form-control col me-2 rounded" type="search" placeholder="Matrícula ou nome do aluno..." aria-label="Search" name="searchTerm" required>
+	<form class="d-flex col-6 needs-validation" role="search" action="/Aluno/Pesquise" method="post" novalidate> 
+		<input class="form-control col me-2 rounded" type="search" placeholder="Matrícula ou nome do aluno..." aria-label="Pesquise" name="searchTerm" required>
 		<input class="col" type="hidden" name="searchType" id="searchType">
 		<button class="btn botao-btn-azul md-1 rounded" type="submit">Buscar</button>
 	</form>
@@ -68,7 +68,7 @@
 				<td>@aluno.Cidade.UF</td>
 				<td>@aluno.CPF</td>
 				<td>
-					<a type="button" class="btn botao-btn-azul" href="@Url.Action("CadastrarAluno", "Aluno", new{ id = aluno.Matricula})">Editar</a>
+					<a type="button" class="btn botao-btn-azul" href="@Url.Action("CadastreAluno", "Aluno", new{ id = aluno.Matricula})">Editar</a>
 					<button type="submit" class="btn botao-btn-cinza" data-bs-toggle="modal" data-bs-target="#excluir-@aluno.Matricula">Excluir</button>
 				</td>
 			</tr>

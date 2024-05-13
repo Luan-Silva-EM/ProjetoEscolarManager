@@ -18,16 +18,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\WorkLuan\EM.Web\EM.Web
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/WorkLuan/EM.Web/EM.Web/Views/Aluno/CadastrarAluno.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9cQ2FkYXN0cmFyQWx1bm8uY3NodG1s
+[C:/WorkLuan/EM.Web/EM.Web/Views/Aluno/CadastreAluno.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9cQ2FkYXN0cmVBbHVuby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/WorkLuan/EM.Web/EM.Web/Views/Aluno/RelatorioAluno.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9cUmVsYXRvcmlvQWx1bm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/WorkLuan/EM.Web/EM.Web/Views/Cidade/CadastrarCidade.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2lkYWRlXENhZGFzdHJhckNpZGFkZS5jc2h0bWw=
+[C:/WorkLuan/EM.Web/EM.Web/Views/Cidade/CadastreCidade.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2lkYWRlXENhZGFzdHJlQ2lkYWRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/WorkLuan/EM.Web/EM.Web/Views/Cidade/Index.cshtml]

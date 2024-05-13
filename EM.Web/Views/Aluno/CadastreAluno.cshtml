@@ -1,0 +1,89 @@
+﻿@using EM.Domain
+@using EM.Domain.Enums
+@model EM.Domain.Aluno
+@{
+	bool isEdicao = ViewBag.IsEdicao ?? false;
+	string titulo = isEdicao ? "Editar Aluno" : "Cadastre Aluno";
+
+	ViewData["Title"] = titulo;
+}
+
+<div class="dev-form">
+	<form class="row g-3 needs-validation" asp-controller="Aluno" asp-action="CadastreAluno" method="post" novalidate>
+		<h1 class="text-center">@ViewData["Title"]</h1>
+		<input type="hidden" asp-for="Matricula" />
+		<input type="hidden" id="isEdicao" name="isEdicao" value="@isEdicao" />
+		<div>
+			<label asp-for="Nome" for="inputNome" class="form-label">Nome</label>
+			<input asp-for="Nome" type="text" maxlength="100" class="form-control" name="Nome" id="Nome" placeholder="Nome" required>
+			<span asp-validation-for="Nome" class="text-danger"></span>
+			<div class="invalid-feedback">
+				Nome deve ser preenchido
+			</div>
+		</div>
+		<div>
+			<label asp-for="CPF" for=" inputCPF" class="form-label">CPF</label>
+			<input asp-for="CPF" oninput="mascara(this)" class="form-control col-md-2" name="CPF" id="CPF" placeholder="XXX.XXX.XXX-XX">
+			<span asp-validation-for="CPF" class="text-danger"></span>
+		</div>
+		<div>
+			<label asp-for="DataNascimento" class="form-label">Data de Nascimento</label>
+			<input asp-for="DataNascimento" type="date" class="form-control" id="DataNascimento" name="DataNascimento"
+				   value="@(isEdicao ? Model.DataNascimento.ToString("yyyy-MM-dd") : "")"
+				   max="@DateTime.Now.ToString("yyyy-MM-dd")" required>
+			<div class="invalid-feedback">
+				Data deve ser preenchida
+			</div>
+		</div>
+		<div class="col-md-6">
+			<label asp-for="Cidade" for="inputCidade" class="form-label">Cidade</label>
+			<select asp-for="Cidade" id="Cidade_ID_Cidade" class="form-select" name="Cidade.ID_Cidade" required>
+				<option selected disabled value="">Selecione</option>
+				@foreach (var cidade in ViewBag.Cidades)
+				{
+					if (Model.Cidade != null && Model.Cidade.ID_Cidade == cidade.ID_Cidade)
+					{
+						<option value="@cidade.ID_Cidade" selected>@cidade.Nome - @cidade.UF</option>
+					}
+					else
+					{
+						<option value="@cidade.ID_Cidade">@cidade.Nome - @cidade.UF</option>
+					}
+				}
+			</select>
+			<div class="invalid-feedback">
+				Selecione uma cidade
+			</div>
+		</div>
+		<div class="col-md-6">
+			<label asp-for="Sexo" for="inputSexo" class="form-label">Sexo</label>
+			@if (!isEdicao)
+			{
+				<select id="Sexo" name="Sexo" class="form-select" required>
+					<option value="" selected>Selecione</option>
+					@{
+						<option value="0">Masculino</option>
+						<option value="1">Feminino</option>
+					}
+				</select>
+			}
+			else
+			{
+				<select asp-for="Sexo" id="inputSexo" class="form-select" name="Sexo" required>
+					<option selected disabled value="">Selecione</option>
+					@foreach (var sexo in Enum.GetValues(typeof(Sexo)))
+					{
+						<option value="@sexo">@sexo</option>
+					}
+				</select>
+			}
+			<div class="invalid-feedback">
+				Selecione um Sexo
+			</div>
+		</div>
+		<div class="col-12">
+			<button type="submit" class="btn botao-btn-azul">Salvar</button>
+			<a class="btn botao-btn-cinza" asp-controller="Home" asp-action="Index">Voltar</a>
+		</div>
+	</form>
+</div>

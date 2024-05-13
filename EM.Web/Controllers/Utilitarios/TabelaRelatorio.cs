@@ -17,9 +17,6 @@ public class TabelaRelatorio
 			writer.PageEvent = new DefaultEvent();
 			document.Open();
 
-
-			
-
 			if (uf != null || sexo.HasValue)
 			{
 				Font filterFont = FontFactory.GetFont("Arial", 12, Font.NORMAL);

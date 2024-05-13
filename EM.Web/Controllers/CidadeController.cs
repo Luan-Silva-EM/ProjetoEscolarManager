@@ -19,7 +19,7 @@ namespace EM.Web.Controllers
         }
 
 
-		public IActionResult CadastrarCidade(int? id)
+		public IActionResult CadastreCidade(int? id)
 		{
 			if (id != null)
 			{
@@ -34,7 +34,7 @@ namespace EM.Web.Controllers
 
 
 		[HttpPost]
-		public IActionResult CadastrarCidade(Cidade cidade)
+		public IActionResult CadastreCidade(Cidade cidade)
 		{
 			if (ModelState.IsValid)
 			{

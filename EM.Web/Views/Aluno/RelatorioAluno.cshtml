@@ -8,7 +8,7 @@
 <h1 style="text-align:center;">Relatório de Alunos</h1>
 
 <div class="dev-form">
-	<form class="row g-3 needs-validation" role="GerarRelatorio" action="Relatorio/GerarRelatorio" method="post">
+	<form class="row g-3 needs-validation" role="GerarRelatorio" action="Relatorio/GerarRelatorio" method="post" target="_blank">
 		<div>
 			<label for="Estado">Filtro por Estado</label>
 			<select name="Uf" class="form-select">
@@ -52,7 +52,7 @@
 		<div class=" d-flex">
 			<a class="btn botao-btn-cinza"  asp-controller="Relatorio" asp-action="LimparFiltros">Limpar Filtro</a>
 			<a class="btn botao-btn-cinza" style="margin-left:3px;" asp-controller="Home" asp-action="Index">Voltar</a>
-			<button type="submit" class=" ms-auto btn botao-btn-azul" asp-area="" asp-controller="Relatorio" asp-action="GerarRelatorio">Gerar Relatório</button>
+			<button type="submit" class=" ms-auto btn botao-btn-azul" asp-area="" asp-controller="Relatorio" asp-action="GerarRelatorio" >Gerar Relatório</button>
 		</div>
 	</form>
 </div>

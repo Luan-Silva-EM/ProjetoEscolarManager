@@ -12,7 +12,7 @@ namespace EM.Repository
 	{
 		public void Add(Aluno aluno)
 		{
-			using DbConnection conn = BancoDeDados.GetConexao();
+			using DbConnection conn = BancoDeDados.CrieConexao();
 			using DbCommand cmd = conn.CreateCommand();
 
 			cmd.CommandText = "INSERT INTO ALUNO(NOME, CPF, DATANASCIMENTO, SEXO, CIDADE_ID)" +
@@ -21,7 +21,7 @@ namespace EM.Repository
 			cmd.Parameters.CreateParameter("@Nome", aluno.Nome);
 			cmd.Parameters.CreateParameter("@DATANASCIMENTO", aluno.DataNascimento);
 			cmd.Parameters.CreateParameter("@SEXO", aluno.Sexo);
-			cmd.Parameters.CreateParameter("@CPF", aluno.CPF);
+			cmd.Parameters.CreateParameter("@CPF", aluno.CPF != null ? aluno.CPF : DBNull.Value);
 			cmd.Parameters.CreateParameter("@CIDADE_ID", aluno.Cidade.ID_Cidade);
 
 			cmd.ExecuteNonQuery();
@@ -29,26 +29,19 @@ namespace EM.Repository
 
 		public void Remove(Aluno aluno)
 		{
-			using DbConnection conn = BancoDeDados.GetConexao();
+			using DbConnection conn = BancoDeDados.CrieConexao();
 			using DbCommand cmd = conn.CreateCommand();
 
 			cmd.CommandText = "DELETE FROM ALUNO WHERE MATRICULA = @Matricula";
-			try
-			{
-				cmd.Parameters.CreateParameter("@Matricula", aluno.Matricula);
 
-				cmd.ExecuteNonQuery();
-				Console.WriteLine("Aluno Removido com Sucesso!");
-			}
-			catch (Exception erro)
-			{
-				Console.WriteLine($"Erro ao deletar um Aluno, detalhe do erro {erro}");
-			}
+			cmd.Parameters.CreateParameter("@Matricula", aluno.Matricula);
+			cmd.ExecuteNonQuery();
+			Console.WriteLine("Aluno Removido com Sucesso!");
 		}
 
 		public void Update(Aluno aluno)
 		{
-			using DbConnection conn = BancoDeDados.GetConexao();
+			using DbConnection conn = BancoDeDados.CrieConexao();
 			using DbCommand cmd = conn.CreateCommand();
 
 			cmd.CommandText = @"
@@ -63,7 +56,7 @@ namespace EM.Repository
 			cmd.Parameters.CreateParameter("@Nome", aluno.Nome);
 			cmd.Parameters.CreateParameter("@DataNascimento", aluno.DataNascimento);
 			cmd.Parameters.CreateParameter("@Sexo", aluno.Sexo);
-			cmd.Parameters.CreateParameter("@CPF", aluno.CPF);
+			cmd.Parameters.CreateParameter("@CPF", aluno.CPF != null ? aluno.CPF : DBNull.Value);
 			cmd.Parameters.CreateParameter("@Cidade_ID", aluno.Cidade.ID_Cidade);
 			cmd.Parameters.CreateParameter("@Matricula", aluno.Matricula);
 
@@ -72,34 +65,37 @@ namespace EM.Repository
 
 		public IEnumerable<Aluno> GetAll()
 		{
-			using DbConnection cn = BancoDeDados.GetConexao();
+			List<Aluno> alunos = [];
+
+			using DbConnection cn = BancoDeDados.CrieConexao();
 			using DbCommand cmd = cn.CreateCommand();
 
 			cmd.CommandText = @"
-				SELECT A.matricula, A.nome, A.sexo, A.dataNascimento, A.CPF, C.nome AS nomeCidade, C.UF AS UFCIDADE
+				SELECT A.matricula, A.nome, A.sexo, A.dataNascimento, A.CPF, C.nome AS nomeCidade, C.UF AS UFCIDADE, C.ID_CIDADE AS IDCIDADE
 				FROM Aluno A
 				INNER JOIN Cidades C ON A.cidade_ID = C.ID_cidade
 				ORDER BY MATRICULA";
 
-			List<Aluno> alunos = new List<Aluno>();
 
 			DbDataReader reader = cmd.ExecuteReader();
 			while (reader.Read())
 			{
-				Aluno aluno = new Aluno();
-				aluno.Matricula = Convert.ToInt32(reader["matricula"]);
-				int sexoInt = Convert.ToInt32(reader["sexo"]);
-				Sexo sexo = (Sexo)sexoInt;
-				aluno.Sexo = sexo;
-				aluno.Nome = reader["nome"].ToString();
-				aluno.CPF = reader["CPF"].ToString();
-				aluno.DataNascimento = Convert.ToDateTime(reader["dataNascimento"]);
 
-				aluno.Cidade = new Cidade();
-				aluno.Cidade.Nome = reader["nomeCidade"].ToString();
-				aluno.Cidade.UF = reader["UFCIDADE"].ToString();
+				alunos.Add(new Aluno
+				{
+					Matricula = Convert.ToInt32(reader["matricula"]),
+					Sexo = (Sexo)Convert.ToInt32(reader["sexo"]),
+					Nome = reader["nome"].ToString()!,
+					CPF = reader["CPF"].ToString(),
+					DataNascimento = Convert.ToDateTime(reader["dataNascimento"]),
+					Cidade = new Cidade
+					{
+						Nome = reader["nomeCidade"].ToString(),
+						UF = reader["UFCIDADE"].ToString(),
+						ID_Cidade = Convert.ToInt32(reader["IDCIDADE"])
 
-				alunos.Add(aluno);
+					}
+				});
 			}
 			reader.Close();
 			return alunos;
@@ -107,9 +103,8 @@ namespace EM.Repository
 
 		public IEnumerable<Aluno> Get(Expression<Func<Aluno, bool>> predicate) => GetAll().Where(predicate.Compile());
 
-		public Aluno GetByMatricula(int matricula) => GetAll().First(c => c.Matricula == matricula);	
+		public Aluno GetByMatricula(int matricula) => GetAll().First(c => c.Matricula == matricula);
 
-		public IEnumerable<Aluno> GetByContendoNoNome(string parteDoNome) => GetAll().Where(a => a.Nome.IndexOf(parteDoNome, StringComparison.OrdinalIgnoreCase) >= 0);
+		public IEnumerable<Aluno> GetByContendoNoNome(string parteDoNome) => GetAll().Where(a => a.Nome.Contains(parteDoNome, StringComparison.OrdinalIgnoreCase));
 	}
 }
-

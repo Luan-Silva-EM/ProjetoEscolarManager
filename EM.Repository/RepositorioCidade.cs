@@ -11,7 +11,7 @@ namespace EM.Repository
     {
         public void Add(Cidade cidade)
         {
-            using DbConnection conn = BancoDeDados.GetConexao();
+            using DbConnection conn = BancoDeDados.CrieConexao();
             using DbCommand cmd = conn.CreateCommand();
 
             cmd.CommandText = "INSERT INTO CIDADES(NOME, UF)" +
@@ -30,24 +30,26 @@ namespace EM.Repository
 
         public IEnumerable<Cidade> GetAll()
         {
-            using DbConnection cn = BancoDeDados.GetConexao();
+            List<Cidade> cidades = [];
+
+            using DbConnection cn = BancoDeDados.CrieConexao();
             using DbCommand cmd = cn.CreateCommand();
 
             cmd.CommandText = @"
 				SELECT C.id_cidade, c.nome, C.UF
 				FROM CIDADES C";
 
-            List<Cidade> cidades = new List<Cidade>();
 
             DbDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                Cidade cidade = new Cidade();
-                cidade.ID_Cidade = int.Parse(reader["id_cidade"].ToString());
-                cidade.Nome = reader["nome"].ToString();
-                cidade.UF = reader["UF"].ToString();
-
-                cidades.Add(cidade);
+				Cidade cidade = new()
+				{
+					ID_Cidade = int.Parse(reader["id_cidade"].ToString()!),
+					Nome = reader["nome"].ToString(),
+					UF = reader["UF"].ToString()
+				};
+				cidades.Add(cidade);
             }
             reader.Close();
             return cidades;
@@ -60,7 +62,7 @@ namespace EM.Repository
 
 		public void Update(Cidade cidade)
         {
-            using DbConnection conn = BancoDeDados.GetConexao();
+            using DbConnection conn = BancoDeDados.CrieConexao();
             using DbCommand cmd = conn.CreateCommand();
 
             cmd.CommandText = "UPDATE CIDADES SET NOME = @Nome, UF = @UF " +

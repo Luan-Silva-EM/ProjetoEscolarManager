@@ -1,6 +1,6 @@
 ﻿@using EM.Domain
 @{
-	ViewData["Title"] = "Cadastrar Cidade";
+	ViewData["Title"] = "Cadastre Cidade";
 }
 
 <div class="row">
@@ -8,7 +8,7 @@
 		<h2>Tabela de Cidades</h2>
 	</div>
 	<div class="col text-end">
-		<a type="button" class="btn botao-btn-azul" asp-controller="Cidade" asp-action="CadastrarCidade">Adicionar Cidade</a>
+		<a type="button" class="btn botao-btn-azul" asp-controller="Cidade" asp-action="CadastreCidade">Adicionar Cidade</a>
 	</div>
 </div>
 <hr>
@@ -30,7 +30,7 @@
 					<td>@cidade.Nome</td>
 					<td>@cidade.UF</td>
 					<td>
-						<a type="button" class="btn botao-btn-azul" href="@Url.Action("CadastrarCidade", "Cidade", new { id = cidade.ID_Cidade })">Editar</a>
+						<a type="button" class="btn botao-btn-azul" href="@Url.Action("CadastreCidade", "Cidade", new { id = cidade.ID_Cidade })">Editar</a>
 					</td>
 				</tr>
 			}

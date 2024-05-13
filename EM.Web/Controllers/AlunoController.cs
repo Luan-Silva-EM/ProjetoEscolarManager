@@ -17,8 +17,7 @@ namespace EM.Web.Controllers
 			_repositorioAluno = repositorioRemove;
 		}
 
-
-		public IActionResult CadastrarAluno(int? id)
+		public IActionResult CadastreAluno(int? id)
 		{
 			ViewBag.Cidades = _repositorioCidade.GetAll().ToList();
 			if(id != null)
@@ -34,7 +33,7 @@ namespace EM.Web.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult CadastrarAluno(Aluno aluno)
+		public IActionResult CadastreAluno(Aluno aluno)
 		{
 			if (ModelState.IsValid)
 			{
@@ -62,25 +61,23 @@ namespace EM.Web.Controllers
 		}
 
 		[HttpPost]
-		public ActionResult Search(string searchTerm, string searchType)
+		public ActionResult Pesquise(string searchTerm, string searchType)
 		{
-			if (searchType != null) // Verifica se searchType não é nulo
+			if (searchType != null) 
 			{
-				if (searchType.ToLower() == "matricula" && int.TryParse(searchTerm, out int matricula))
+				if (searchType.Equals("matricula", StringComparison.CurrentCultureIgnoreCase) && int.TryParse(searchTerm, out int matricula))
 				{
 					Aluno aluno = _repositorioAluno.GetByMatricula(matricula);
-					Console.WriteLine($"Aluno encontrado: {aluno}"); // Adiciona esta linha para depuração
-					IEnumerable<Aluno> alunos = aluno != null ? new List<Aluno> { aluno } : new List<Aluno>();
+					
+					IEnumerable<Aluno> alunos = aluno != null ? new List<Aluno> { aluno } : [];
 					return View("Views/Home/Index.cshtml", alunos);
 				}
-				else if (searchType.ToLower() == "nome")
+				else if (searchType.Equals("nome", StringComparison.CurrentCultureIgnoreCase))
 				{
 					IEnumerable<Aluno> alunos = _repositorioAluno.GetByContendoNoNome(searchTerm);
 					return View("Views/Home/Index.cshtml", alunos);
 				}
 			}
-
-			// Se searchType for nulo ou não corresponder a "matricula" ou "nome", retorna uma visualização vazia
 			return View("Views/Home/Index.cshtml", new List<Aluno>());
 		}
 	}
