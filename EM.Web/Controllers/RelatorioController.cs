@@ -24,28 +24,28 @@ namespace EM.Web.Controllers
 			ViewBag.cidades = _repositorioCidade.GetAll().ToList();
 			return View("/Views/Aluno/RelatorioAluno.cshtml");
 		}
-		public IActionResult LimparFiltros()
+		public IActionResult LimpeFiltros()
 		{
 			return RedirectToAction(nameof(RelatorioAluno));
 		}
 
-		public IActionResult GerarRelatorio()
+		public IActionResult GereRelatorio()
 		{
 			List<Aluno> alunos = _repositorioAluno.GetAll().ToList();
 
-			byte[] pdfBytes = _tabelaRelatorio.GerarRelatorio(alunos, null, null, false, null);
+			byte[] pdfBytes = _tabelaRelatorio.GereRelatorio(alunos, null, null, false, null);
 
 			return File(pdfBytes, "application/pdf");
 		}
 
 		[HttpPost]
-		public IActionResult GerarRelatorio(Document document, int? ID_Cidade, Sexo? sexo, string ordem, string? uf, bool linhasZebradas, string horizontal)
+		public IActionResult GereRelatorio(Document document, int? ID_Cidade, Sexo? sexo, string ordem, string? uf, bool linhasZebradas, string horizontal)
 		{
 			List<Aluno> alunos = _repositorioAluno.GetAll().ToList();
 
-			alunos = _tabelaRelatorio.AplicarFiltros(document, alunos, ID_Cidade, sexo, ordem, uf);
+			alunos = _tabelaRelatorio.ApliqueFiltros(document, alunos, ID_Cidade, sexo, ordem, uf);
 
-			byte[] pdfBytes = _tabelaRelatorio.GerarRelatorio(alunos, sexo, uf, linhasZebradas, horizontal);
+			byte[] pdfBytes = _tabelaRelatorio.GereRelatorio(alunos, sexo, uf, linhasZebradas, horizontal);
 
 			return File(pdfBytes, "application/pdf");
 		}

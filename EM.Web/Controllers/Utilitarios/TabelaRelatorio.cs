@@ -7,7 +7,7 @@ namespace EM.Web.Controllers.Utilitarios;
 
 public class TabelaRelatorio
 {
-	public byte[] GerarRelatorio(List<Aluno> alunos, Sexo? sexo, string? uf, bool linhasZebradas, string? horizontal)
+	public byte[] GereRelatorio(List<Aluno> alunos, Sexo? sexo, string? uf, bool linhasZebradas, string? horizontal)
 	{
 		try
 		{
@@ -38,12 +38,10 @@ public class TabelaRelatorio
 				}
 			}
 
-			PdfPTable tabelaDeEstudante = CriarTabelaDeEstudante(alunos, linhasZebradas);
+			PdfPTable tabelaDeEstudante = CrieTabelaDeEstudante(alunos, linhasZebradas);
 			tabelaDeEstudante.SpacingBefore = 15;
 			tabelaDeEstudante.HeaderRows = 1;
 			document.Add(tabelaDeEstudante);
-
-
 
 			document.Close();
 
@@ -57,7 +55,7 @@ public class TabelaRelatorio
 		}
 	}
 
-	static PdfPTable CriarTabelaDeEstudante(List<Aluno> alunos, bool linhasZebradas)
+	static PdfPTable CrieTabelaDeEstudante(List<Aluno> alunos, bool linhasZebradas)
 	{
 		BaseColor corFundoTitulo = new(76, 154, 109);
 		BaseColor corFonteTitulo = BaseColor.WHITE;
@@ -95,25 +93,25 @@ public class TabelaRelatorio
 			BaseColor? backgroundColor = isZebrado ? BaseColor.LIGHT_GRAY : null;
 
 			Phrase Matricula = new(aluno.Matricula.ToString(), fonteConteudo);
-			AdicionarCelulaTabela(tabela, Matricula, backgroundColor);
+			AdicioneCelulaTabela(tabela, Matricula, backgroundColor);
 
 			Phrase Nome = new(aluno.Nome, fonteConteudo);
-			AdicionarCelulaTabela(tabela, Nome, backgroundColor, horizontalAlignment: Element.ALIGN_LEFT);
+			AdicioneCelulaTabela(tabela, Nome, backgroundColor, horizontalAlignment: Element.ALIGN_LEFT);
 
 			Phrase Sexo = new(aluno.Sexo == Domain.Enums.Sexo.Masculino ? "M" : "F".ToString(), fonteConteudo);
-			AdicionarCelulaTabela(tabela, Sexo, backgroundColor);
+			AdicioneCelulaTabela(tabela, Sexo, backgroundColor);
 
-			Phrase Idade = new(CalcularIdade(aluno.DataNascimento), fonteConteudo);
-			AdicionarCelulaTabela(tabela, Idade, backgroundColor);
+			Phrase Idade = new(CalculeIdade(aluno.DataNascimento), fonteConteudo);
+			AdicioneCelulaTabela(tabela, Idade, backgroundColor);
 
 			Phrase Cidade = new(aluno.Cidade.Nome, fonteConteudo);
-			AdicionarCelulaTabela(tabela, Cidade, backgroundColor);
+			AdicioneCelulaTabela(tabela, Cidade, backgroundColor);
 
 			Phrase UF = new(aluno.Cidade.UF, fonteConteudo);
-			AdicionarCelulaTabela(tabela, UF, backgroundColor);
+			AdicioneCelulaTabela(tabela, UF, backgroundColor);
 
 			Phrase CPF = new(aluno.CPF, fonteConteudo);
-			AdicionarCelulaTabela(tabela, CPF, backgroundColor);
+			AdicioneCelulaTabela(tabela, CPF, backgroundColor);
 
 			if (isZebrado || count != 0)
 			{
@@ -124,7 +122,7 @@ public class TabelaRelatorio
 		return tabela;
 	}
 
-	public List<Aluno> AplicarFiltros(Document document, List<Aluno> alunos, int? ID_Cidade, Sexo? sexo, string ordem, string? uf)
+	public List<Aluno> ApliqueFiltros(Document document, List<Aluno> alunos, int? ID_Cidade, Sexo? sexo, string ordem, string? uf)
 	{
 		// Criando uma cópia da lista original para evitar alterações indesejadas
 		List<Aluno> alunosFiltrados = new(alunos);
@@ -161,8 +159,7 @@ public class TabelaRelatorio
 		return alunosFiltrados;
 	}
 
-
-	static void AdicionarCelulaTabela(PdfPTable table, Phrase phrase, BaseColor backGroundColor, float fixedHeight = 20, int horizontalAlignment = Element.ALIGN_CENTER, int verticalAlignment = Element.ALIGN_MIDDLE)
+	static void AdicioneCelulaTabela(PdfPTable table, Phrase phrase, BaseColor backGroundColor, float fixedHeight = 20, int horizontalAlignment = Element.ALIGN_CENTER, int verticalAlignment = Element.ALIGN_MIDDLE)
 	{
 		PdfPCell cell = new(phrase)
 		{
@@ -175,7 +172,7 @@ public class TabelaRelatorio
 		table.AddCell(cell);
 	}
 
-	private static string CalcularIdade(DateTime dataNascimento)
+	private static string CalculeIdade(DateTime dataNascimento)
 	{
 		DateTime agora = DateTime.Now;
 		int anos = agora.Year - dataNascimento.Year;

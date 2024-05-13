@@ -1,43 +1,28 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace EM.Domain.Utilitarios
+﻿namespace EM.Domain.Utilitarios
 {
-	public class Validacoes : ValidationAttribute
+	public class Validacoes
 	{
 		public static bool CPFValidacao(string cpf)
 		{
-			int[] multiplicador1 = [10, 9, 8, 7, 6, 5, 4, 3, 2];
-			int[] multiplicador2 = [11, 10, 9, 8, 7, 6, 5, 4, 3, 2];
-			string tempCpf;
-			string digito;
-			int soma;
-			int resto;
-			cpf = cpf.Trim();
-			cpf = cpf.Replace(".", "").Replace("-", "");
+			cpf = cpf.Trim().Replace(".", "").Replace("-", "");
 
 			if (cpf.Length != 11 || cpf.Distinct().Count() == 1)
 				return false;
-			tempCpf = cpf.Substring(0, 9);
-			soma = 0;
-			for (int i = 0; i < 9; i++)
-				soma += int.Parse(tempCpf[i].ToString()) * multiplicador1[i];
+
+			int[] multiplicador1 = [10, 9, 8, 7, 6, 5, 4, 3, 2];
+			int[] multiplicador2 = [11, 10, 9, 8, 7, 6, 5, 4, 3, 2];
+
+			string tempCpf = cpf[..9];
+			int soma = tempCpf.Zip(multiplicador1, (x, y) => int.Parse(x.ToString()) * y).Sum();
+			int resto = soma % 11;
+			int digito1 = resto < 2 ? 0 : 11 - resto;
+
+			tempCpf += digito1;
+			soma = tempCpf.Zip(multiplicador2, (x, y) => int.Parse(x.ToString()) * y).Sum();
 			resto = soma % 11;
-			if (resto < 2)
-				resto = 0;
-			else
-				resto = 11 - resto;
-			digito = resto.ToString();
-			tempCpf += digito;
-			soma = 0;
-			for (int i = 0; i < 10; i++)
-				soma += int.Parse(tempCpf[i].ToString()) * multiplicador2[i];
-			resto = soma % 11;
-			if (resto < 2)
-				resto = 0;
-			else
-				resto = 11 - resto;
-			digito = digito + resto.ToString();
-			return cpf.EndsWith(digito);
+			int digito2 = resto < 2 ? 0 : 11 - resto;
+
+			return cpf.EndsWith(digito1.ToString() + digito2.ToString());
 		}
 	}
 }
