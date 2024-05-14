@@ -1,8 +1,7 @@
-﻿namespace EM.Domain.Enums
+﻿namespace EM.Domain.Enums;
+
+public enum Sexo
 {
-	public enum Sexo
-	{
-		Masculino = 0,
-		Feminino = 1
-	}
+	Masculino = 0,
+	Feminino = 1
 }

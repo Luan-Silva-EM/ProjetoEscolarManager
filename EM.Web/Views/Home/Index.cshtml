@@ -33,8 +33,8 @@
 <!--caixaTexto-->
 <div class="row">
 	<form class="d-flex col-6 needs-validation" role="search" action="/Aluno/Pesquise" method="post" novalidate> 
-		<input class="form-control col me-2 rounded" type="search" placeholder="Matrícula ou nome do aluno..." aria-label="Pesquise" name="searchTerm" required>
-		<input class="col" type="hidden" name="searchType" id="searchType">
+		<input class="form-control col me-2 rounded" type="search" placeholder="Matrícula ou nome do aluno..." aria-label="Pesquise" name="TermoPesquisa" required>
+		<input class="col" type="hidden" name="TipoPesquisa" id="searchType">
 		<button class="btn botao-btn-azul md-1 rounded" type="submit">Buscar</button>
 	</form>
 	<a type="button" class="btn botao-btn-azul ms-auto" style="max-width:230px; margin-right:13px;" asp-area="" asp-controller="Relatorio" asp-action="GereRelatorio" target="_blank">Relatório de todos os alunos</a>

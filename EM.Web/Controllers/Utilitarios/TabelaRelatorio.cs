@@ -17,25 +17,19 @@ public class TabelaRelatorio
 			writer.PageEvent = new DefaultEvent();
 			document.Open();
 
-			if (uf != null || sexo.HasValue)
+			Font filterFont = FontFactory.GetFont("Arial", 12, Font.NORMAL);
+			document.Add(new Paragraph("Filtros utilizados:"));
+
+			alunos = uf != null ? alunos.Where(a => a.Cidade.UF == uf).ToList() : alunos;
+			alunos = sexo.HasValue ? alunos.Where(a => a.Sexo == sexo).ToList() : alunos;
+
+			if (uf != null)
+				document.Add(new Paragraph($"Estado: {uf}") { Alignment = Element.ALIGN_LEFT });
+
+			if (sexo.HasValue)
 			{
-				Font filterFont = FontFactory.GetFont("Arial", 12, Font.NORMAL);
-				document.Add(new Paragraph($"Filtros utilizados:"));
-				Paragraph filtros = new Paragraph($"Filtros utilizados:");
-				if (uf != null)
-				{
-					alunos = alunos.Where(a => a.Cidade.UF == uf).ToList();
-					Paragraph filterUf = new Paragraph($"Estado: {uf}");
-					filterUf.Alignment = Element.ALIGN_LEFT;
-					document.Add(filterUf);
-				}
-				if (sexo.HasValue)
-				{
-					alunos = alunos.Where(a => a.Sexo == sexo).ToList();
-					Paragraph filterSexo = new Paragraph($"Sexo: {(sexo == 0 ? "Masculino" : "Feminino")}", filterFont);
-					filterSexo.Alignment = Element.ALIGN_LEFT;
-					document.Add(filterSexo);
-				}
+				string sexoTexto = sexo == 0 ? "Masculino" : "Feminino";
+				document.Add(new Paragraph($"Sexo: {sexoTexto}", filterFont) { Alignment = Element.ALIGN_LEFT });
 			}
 
 			PdfPTable tabelaDeEstudante = CrieTabelaDeEstudante(alunos, linhasZebradas);
@@ -79,10 +73,7 @@ public class TabelaRelatorio
 		tabela.AddCell(new Phrase("UF", fonteTitulo));
 		tabela.AddCell(new Phrase("CPF", fonteTitulo));
 
-		if (linhasZebradas)
-		{
-			tabela.DefaultCell.BackgroundColor = BaseColor.LIGHT_GRAY;
-		}
+		tabela.DefaultCell.BackgroundColor = linhasZebradas ? BaseColor.LIGHT_GRAY : tabela.DefaultCell.BackgroundColor;
 		bool isZebrado = linhasZebradas;
 
 		int count = 0;
@@ -122,7 +113,7 @@ public class TabelaRelatorio
 		return tabela;
 	}
 
-	public List<Aluno> ApliqueFiltros(Document document, List<Aluno> alunos, int? ID_Cidade, Sexo? sexo, string ordem, string? uf)
+	public List<Aluno> ApliqueFiltros(List<Aluno> alunos, int? ID_Cidade, Sexo? sexo, string ordem, string? uf)
 	{
 		// Criando uma cópia da lista original para evitar alterações indesejadas
 		List<Aluno> alunosFiltrados = new(alunos);
@@ -135,10 +126,7 @@ public class TabelaRelatorio
 			.Where(a => !sexo.HasValue || a.Sexo == sexo)
 			.ToList();
 
-		if (uf != null)
-		{
-			alunosFiltrados = alunosFiltrados.Where(a => a.Cidade.UF == uf).ToList();
-		}
+		alunosFiltrados = uf != null ? alunosFiltrados.Where(a => a.Cidade.UF == uf).ToList() : alunosFiltrados;
 
 		// Ordena os alunos de acordo com a opção escolhida
 		switch (ordem)

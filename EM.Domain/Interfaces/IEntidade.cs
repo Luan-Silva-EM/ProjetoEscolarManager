@@ -1,7 +1,6 @@
-﻿namespace EM.Domain.Interfaces
-{
-	public interface IEntidade
-	{
+﻿namespace EM.Domain.Interfaces;
 
-	}
+public interface IEntidade
+{
+
 }

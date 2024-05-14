@@ -5,75 +5,74 @@ using ProjetoEscola;
 using System.Data.Common;
 using System.Linq.Expressions;
 
-namespace EM.Repository
+namespace EM.Repository;
+
+public class RepositorioCidade : IRepositorioAbstrato<Cidade>
 {
-    public class RepositorioCidade : IRepositorioAbstrato<Cidade>
-    {
-        public void Add(Cidade cidade)
-        {
-            using DbConnection conn = BancoDeDados.CrieConexao();
-            using DbCommand cmd = conn.CreateCommand();
+	public void Add(Cidade cidade)
+	{
+		using DbConnection conn = BancoDeDados.CrieConexao();
+		using DbCommand cmd = conn.CreateCommand();
 
-            cmd.CommandText = "INSERT INTO CIDADES(NOME, UF)" +
-                                "VALUES(@NOME, @UF)";
+		cmd.CommandText = "INSERT INTO CIDADES(NOME, UF)" +
+							"VALUES(@NOME, @UF)";
 
-            cmd.Parameters.CreateParameter("@Nome", cidade.Nome);
-            cmd.Parameters.CreateParameter("@UF", cidade.UF);
+		cmd.Parameters.CreateParameter("@Nome", cidade.Nome);
+		cmd.Parameters.CreateParameter("@UF", cidade.UF);
 
-            cmd.ExecuteNonQuery();
-        }
+		cmd.ExecuteNonQuery();
+	}
 
-        public IEnumerable<Cidade> Get(Expression<Func<Cidade, bool>> predicate)
-        {
-            return GetAll().Where(predicate.Compile());
-        }
+	public IEnumerable<Cidade> Get(Expression<Func<Cidade, bool>> predicate)
+	{
+		return GetAll().Where(predicate.Compile());
+	}
 
-        public IEnumerable<Cidade> GetAll()
-        {
-            List<Cidade> cidades = [];
+	public IEnumerable<Cidade> GetAll()
+	{
+		List<Cidade> cidades = [];
 
-            using DbConnection cn = BancoDeDados.CrieConexao();
-            using DbCommand cmd = cn.CreateCommand();
+		using DbConnection cn = BancoDeDados.CrieConexao();
+		using DbCommand cmd = cn.CreateCommand();
 
-            cmd.CommandText = @"
+		cmd.CommandText = @"
 				SELECT C.id_cidade, c.nome, C.UF
 				FROM CIDADES C";
 
 
-            DbDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
-            {
-				Cidade cidade = new()
-				{
-					ID_Cidade = int.Parse(reader["id_cidade"].ToString()!),
-					Nome = reader["nome"].ToString(),
-					UF = reader["UF"].ToString()
-				};
-				cidades.Add(cidade);
-            }
-            reader.Close();
-            return cidades;
-        }
-
-		public void Remove(Cidade objeto)
+		DbDataReader reader = cmd.ExecuteReader();
+		while (reader.Read())
 		{
-			throw new NotImplementedException();
+			Cidade cidade = new()
+			{
+				ID_Cidade = int.Parse(reader["id_cidade"].ToString()!),
+				Nome = reader["nome"].ToString(),
+				UF = reader["UF"].ToString()
+			};
+			cidades.Add(cidade);
 		}
+		reader.Close();
+		return cidades;
+	}
 
-		public void Update(Cidade cidade)
-        {
-            using DbConnection conn = BancoDeDados.CrieConexao();
-            using DbCommand cmd = conn.CreateCommand();
+	public void Remove(Cidade objeto)
+	{
+		throw new NotImplementedException();
+	}
 
-            cmd.CommandText = "UPDATE CIDADES SET NOME = @Nome, UF = @UF " +
-                                "WHERE ID_CIDADE = @ID";
+	public void Update(Cidade cidade)
+	{
+		using DbConnection conn = BancoDeDados.CrieConexao();
+		using DbCommand cmd = conn.CreateCommand();
 
-            cmd.Parameters.CreateParameter("@Nome", cidade.Nome);
-            cmd.Parameters.CreateParameter("@UF", cidade.UF);
-            cmd.Parameters.CreateParameter("@ID", cidade.ID_Cidade);
+		cmd.CommandText = "UPDATE CIDADES SET NOME = @Nome, UF = @UF " +
+							"WHERE ID_CIDADE = @ID";
 
-            cmd.ExecuteNonQuery();
-        }
-    }
+		cmd.Parameters.CreateParameter("@Nome", cidade.Nome);
+		cmd.Parameters.CreateParameter("@UF", cidade.UF);
+		cmd.Parameters.CreateParameter("@ID", cidade.ID_Cidade);
+
+		cmd.ExecuteNonQuery();
+	}
 }
 
